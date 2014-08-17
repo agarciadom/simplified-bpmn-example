@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getSequenceFlow()
- * @model
+ * @model annotation="gmf.link tool.name='Sequence Flow'"
  * @generated
  */
 public interface SequenceFlow extends ConnectingObject {

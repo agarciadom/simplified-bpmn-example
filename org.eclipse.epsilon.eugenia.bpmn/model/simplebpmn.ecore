@@ -29,8 +29,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//FlowObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//FlowObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//ConnectingObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//ConnectingObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="gmf.link">
+      <details key="tool.name" value="Message Flow"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="gmf.link">
+      <details key="tool.name" value="Sequence Flow"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//ConnectingObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="FlowObject" abstract="true" eSuperTypes="#//BPMNElement">
     <eAnnotations source="gmf.node">
@@ -38,11 +46,25 @@
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Gateway" abstract="true" eSuperTypes="#//FlowObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="XOR" eSuperTypes="#//Gateway"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//Gateway"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AND" eSuperTypes="#//Gateway"/>
+  <eClassifiers xsi:type="ecore:EClass" name="XOR" eSuperTypes="#//Gateway">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="XOR Gateway"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//Gateway">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="OR Gateway"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AND" eSuperTypes="#//Gateway">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="AND Gateway"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//EventType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//EventType">
+      <eAnnotations source="gmf.label"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EventType">
     <eLiterals name="START"/>
@@ -55,7 +77,11 @@
       <details key="label" value="name"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataObject" eSuperTypes="#//Artifact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataObject" eSuperTypes="#//Artifact">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="Data Object"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//Artifact">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//BPMNElement"/>

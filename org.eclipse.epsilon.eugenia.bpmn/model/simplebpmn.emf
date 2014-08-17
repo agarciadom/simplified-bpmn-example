@@ -34,10 +34,12 @@ abstract class ConnectingObject extends BPMNElement {
 	ref FlowObject to;
 }
 
+@gmf.link(tool.name="Message Flow")
 class MessageFlow extends ConnectingObject {
 	
 }
 
+@gmf.link(tool.name="Sequence Flow")
 class SequenceFlow extends ConnectingObject {
 	
 }
@@ -57,19 +59,22 @@ abstract class Gateway extends FlowObject {
 	
 }
 
+@gmf.node(tool.name="XOR Gateway")
 class XOR extends Gateway {
 	
 }
 
+@gmf.node(tool.name="OR Gateway")
 class OR extends Gateway {
 	
 }
 
+@gmf.node(tool.name="AND Gateway")
 class AND extends Gateway {
-	
 }
 
 class Event extends FlowObject {
+	@gmf.label
 	attr EventType[1] type;
 }
 
@@ -90,6 +95,7 @@ abstract class Artifact extends BPMNElement {
 	
 }
 
+@gmf.node(tool.name="Data Object")
 class DataObject extends Artifact {
 	
 }

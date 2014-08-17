@@ -256,12 +256,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String AND1CreationTool_title;
+	public static String ANDGateway1CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String AND1CreationTool_desc;
+	public static String ANDGateway1CreationTool_desc;
 
 	/**
 	 * @generated
@@ -316,12 +316,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String OR7CreationTool_title;
+	public static String ORGateway7CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String OR7CreationTool_desc;
+	public static String ORGateway7CreationTool_desc;
 
 	/**
 	 * @generated
@@ -336,12 +336,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String XOR9CreationTool_title;
+	public static String XORGateway9CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String XOR9CreationTool_desc;
+	public static String XORGateway9CreationTool_desc;
 
 	/**
 	 * @generated

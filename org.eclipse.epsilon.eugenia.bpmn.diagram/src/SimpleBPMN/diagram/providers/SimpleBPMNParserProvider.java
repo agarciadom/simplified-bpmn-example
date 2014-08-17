@@ -15,6 +15,7 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.parsers.EnumParser;
 
 /**
  * @generated
@@ -134,6 +135,24 @@ public class SimpleBPMNParserProvider extends AbstractProvider implements
 			eventName_5006Parser = parser;
 		}
 		return eventName_5006Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser eventType_5010Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getEventType_5010Parser() {
+		if (eventType_5010Parser == null) {
+			EAttribute editableFeature = SimpleBPMN.SimpleBPMNPackage.eINSTANCE
+					.getEvent_Type();
+			EnumParser parser = new EnumParser(editableFeature);
+			eventType_5010Parser = parser;
+		}
+		return eventType_5010Parser;
 	}
 
 	/**
@@ -267,6 +286,9 @@ public class SimpleBPMNParserProvider extends AbstractProvider implements
 			return getPoolName_5005Parser();
 		case SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID:
 			return getEventName_5006Parser();
+
+		case SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID:
+			return getEventType_5010Parser();
 		case SimpleBPMN.diagram.edit.parts.ActivityNameEditPart.VISUAL_ID:
 			return getActivityName_5007Parser();
 		case SimpleBPMN.diagram.edit.parts.DataObjectNameEditPart.VISUAL_ID:

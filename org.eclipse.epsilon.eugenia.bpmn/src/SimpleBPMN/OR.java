@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getOR()
- * @model
+ * @model annotation="gmf.node tool.name='OR Gateway'"
  * @generated
  */
 public interface OR extends Gateway {

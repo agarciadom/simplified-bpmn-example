@@ -246,6 +246,9 @@ public class SimpleBPMNVisualIDRegistry {
 			if (SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 			if (SimpleBPMN.diagram.edit.parts.ActivityNameEditPart.VISUAL_ID == nodeVisualID) {

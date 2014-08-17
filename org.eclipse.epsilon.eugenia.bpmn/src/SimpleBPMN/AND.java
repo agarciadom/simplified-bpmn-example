@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getAND()
- * @model
+ * @model annotation="gmf.node tool.name='AND Gateway'"
  * @generated
  */
 public interface AND extends Gateway {

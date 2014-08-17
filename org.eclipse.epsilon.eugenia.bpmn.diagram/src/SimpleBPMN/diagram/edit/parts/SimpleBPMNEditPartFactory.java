@@ -64,6 +64,9 @@ public class SimpleBPMNEditPartFactory implements EditPartFactory {
 			case SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID:
 				return new SimpleBPMN.diagram.edit.parts.EventNameEditPart(view);
 
+			case SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.EventTypeEditPart(view);
+
 			case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 				return new SimpleBPMN.diagram.edit.parts.ActivityEditPart(view);
 

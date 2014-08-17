@@ -52,8 +52,10 @@
           <insets top="5" left="5" bottom="5" right="5"/>
         </border>
         <children xsi:type="gmfgraph:Label" name="EventLabelFigure" text="Event"/>
+        <children xsi:type="gmfgraph:Label" name="EventTypeLabelFigure"/>
       </actualFigure>
       <accessors accessor="getFigureEventLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureEventTypeLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors name="ActivityFigure">
       <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ActivityFigure">
@@ -119,6 +121,7 @@
   <labels name="ORLabel" figure="ORFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels name="ANDLabel" figure="ANDFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels name="EventLabel" figure="EventFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="EventTypeLabel" figure="EventFigure" elementIcon="false" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
   <labels name="ActivityLabel" figure="ActivityFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
   <labels name="DataObjectLabel" figure="DataObjectFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
   <labels name="GroupLabel" figure="GroupFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>

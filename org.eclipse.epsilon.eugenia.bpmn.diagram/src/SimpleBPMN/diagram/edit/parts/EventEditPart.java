@@ -117,6 +117,11 @@ public class EventEditPart extends ShapeNodeEditPart {
 					.setLabel(getPrimaryShape().getFigureEventLabelFigure());
 			return true;
 		}
+		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventTypeEditPart) {
+			((SimpleBPMN.diagram.edit.parts.EventTypeEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureEventTypeLabelFigure());
+			return true;
+		}
 		return false;
 	}
 
@@ -125,6 +130,9 @@ public class EventEditPart extends ShapeNodeEditPart {
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventNameEditPart) {
+			return true;
+		}
+		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventTypeEditPart) {
 			return true;
 		}
 		return false;
@@ -273,6 +281,10 @@ public class EventEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigureEventLabelFigure;
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEventTypeLabelFigure;
 
 		/**
 		 * @generated
@@ -297,6 +309,12 @@ public class EventEditPart extends ShapeNodeEditPart {
 
 			this.add(fFigureEventLabelFigure);
 
+			fFigureEventTypeLabelFigure = new WrappingLabel();
+
+			fFigureEventTypeLabelFigure.setText("");
+
+			this.add(fFigureEventTypeLabelFigure);
+
 		}
 
 		/**
@@ -304,6 +322,13 @@ public class EventEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigureEventLabelFigure() {
 			return fFigureEventLabelFigure;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEventTypeLabelFigure() {
+			return fFigureEventTypeLabelFigure;
 		}
 
 	}

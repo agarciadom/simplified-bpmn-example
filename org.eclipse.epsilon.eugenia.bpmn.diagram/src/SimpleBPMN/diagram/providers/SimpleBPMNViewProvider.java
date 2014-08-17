@@ -4,6 +4,7 @@
 package SimpleBPMN.diagram.providers;
 
 import java.util.ArrayList;
+
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;
@@ -563,6 +564,10 @@ public class SimpleBPMNViewProvider extends AbstractProvider implements
 				node,
 				SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 						.getType(SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID));
+		Node label5010 = createLabel(
+				node,
+				SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+						.getType(SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID));
 		return node;
 	}
 

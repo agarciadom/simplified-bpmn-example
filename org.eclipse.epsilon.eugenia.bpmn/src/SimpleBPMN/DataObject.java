@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getDataObject()
- * @model
+ * @model annotation="gmf.node tool.name='Data Object'"
  * @generated
  */
 public interface DataObject extends Artifact {

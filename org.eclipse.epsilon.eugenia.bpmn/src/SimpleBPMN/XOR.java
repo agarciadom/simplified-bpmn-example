@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getXOR()
- * @model
+ * @model annotation="gmf.node tool.name='XOR Gateway'"
  * @generated
  */
 public interface XOR extends Gateway {

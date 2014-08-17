@@ -119,6 +119,13 @@
         <features
             href="simplebpmn.ecore#//BPMNElement/name"/>
       </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="simplebpmn.gmfgraph#EventTypeLabel"/>
+        <features
+            href="simplebpmn.ecore#//Event/type"/>
+      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simplebpmn.gmftool#//@palette/@tools.0/@tools.3"/>

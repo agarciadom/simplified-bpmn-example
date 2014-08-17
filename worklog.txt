@@ -8,3 +8,4 @@ Second version (fixed missing label through Eugenia validation): 18:26
 Third version (fixed missing from, to): 18:28
 Fourth version (changed @gmf.edge to @gmf.link): 18:30
 Tested version as basically working: 18:32
+v5 (customize tool names): 18:38

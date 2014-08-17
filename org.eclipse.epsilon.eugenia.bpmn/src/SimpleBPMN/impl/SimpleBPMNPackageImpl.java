@@ -668,6 +668,8 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		createGmf_2Annotations();
 		// gmf.link
 		createGmf_3Annotations();
+		// gmf.label
+		createGmf_4Annotations();
 	}
 
 	/**
@@ -721,10 +723,34 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 			 "label", "name"
 		   });	
 		addAnnotation
+		  (xorEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "XOR Gateway"
+		   });	
+		addAnnotation
+		  (orEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "OR Gateway"
+		   });	
+		addAnnotation
+		  (andEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "AND Gateway"
+		   });	
+		addAnnotation
 		  (artifactEClass, 
 		   source, 
 		   new String[] {
 			 "label", "name"
+		   });	
+		addAnnotation
+		  (dataObjectEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "Data Object"
 		   });
 	}
 
@@ -743,6 +769,33 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 			 "label", "name",
 			 "source", "from",
 			 "target", "to"
+		   });	
+		addAnnotation
+		  (messageFlowEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "Message Flow"
+		   });	
+		addAnnotation
+		  (sequenceFlowEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "Sequence Flow"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.label</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.label";	
+		addAnnotation
+		  (getEvent_Type(), 
+		   source, 
+		   new String[] {
 		   });
 	}
 

@@ -95,7 +95,7 @@
     <topLevelNodes visualID="2006" editPartClassName="EventEditPart" itemSemanticEditPolicyClassName="EventItemSemanticEditPolicy" canonicalEditPolicyClassName="EventCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EventGraphicalNodeEditPolicy" createCommandClassName="EventCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EventEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EventFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEventLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEventLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEventLabelFigure.setText(&quot;Event&quot;);&#xA;&#xA;this.add(fFigureEventLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEventLabelFigure() {&#xA;&#x9;&#x9;return fFigureEventLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EventFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEventLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEventTypeLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEventLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEventLabelFigure.setText(&quot;Event&quot;);&#xA;&#xA;this.add(fFigureEventLabelFigure);&#xA;&#xA;&#xA;&#xA;fFigureEventTypeLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEventTypeLabelFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureEventTypeLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEventLabelFigure() {&#xA;&#x9;&#x9;return fFigureEventLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEventTypeLabelFigure() {&#xA;&#x9;&#x9;return fFigureEventTypeLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass href="simplebpmn.genmodel#//SimpleBPMN/Event"/>
         <containmentMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
@@ -106,6 +106,13 @@
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEventLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/BPMNElement/name"/>
+        </modelFacet>
+      </labels>
+      <labels visualID="5010" editPartClassName="EventTypeEditPart" itemSemanticEditPolicyClassName="EventTypeItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEventTypeLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.1">
+          <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/Event/type"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -225,20 +232,20 @@
     </links>
     <palette>
       <groups title="Objects" collapse="true">
-        <entries xsi:type="gmfgen:ToolEntry" title="AND" description="Create new AND" genNodes="//@diagram/@topLevelNodes.2"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="AND Gateway" description="Create new AND Gateway" genNodes="//@diagram/@topLevelNodes.2"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Activity" description="Create new Activity" genNodes="//@diagram/@topLevelNodes.6"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="DataObject" description="Create new DataObject" genNodes="//@diagram/@topLevelNodes.7"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Data Object" description="Create new Data Object" genNodes="//@diagram/@topLevelNodes.7"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Event" description="Create new Event" genNodes="//@diagram/@topLevelNodes.5"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Group" description="Create new Group" genNodes="//@diagram/@topLevelNodes.8"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Lane" description="Create new Lane" genNodes="//@diagram/@topLevelNodes.3"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="OR" description="Create new OR" genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="OR Gateway" description="Create new OR Gateway" genNodes="//@diagram/@topLevelNodes.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Pool" description="Create new Pool" genNodes="//@diagram/@topLevelNodes.4"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="XOR" description="Create new XOR" genNodes="//@diagram/@topLevelNodes.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="XOR Gateway" description="Create new XOR Gateway" genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
       <groups title="Connections" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="Association" description="Create new Association" genLinks="//@diagram/@links.2"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="MessageFlow" description="Create new MessageFlow" genLinks="//@diagram/@links.0"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="SequenceFlow" description="Create new SequenceFlow" genLinks="//@diagram/@links.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Message Flow" description="Create new Message Flow" genLinks="//@diagram/@links.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Sequence Flow" description="Create new Sequence Flow" genLinks="//@diagram/@links.1"/>
       </groups>
     </palette>
     <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="org.eclipse.epsilon.eugenia.bpmn.diagram.general" name="SimpleBPMN Diagram">
@@ -344,6 +351,7 @@
   <domainGenModel href="simplebpmn.genmodel#/"/>
   <labelParsers extensibleViaService="true">
     <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.8/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedEnumParser" uses="//@diagram/@topLevelNodes.5/@labels.1/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

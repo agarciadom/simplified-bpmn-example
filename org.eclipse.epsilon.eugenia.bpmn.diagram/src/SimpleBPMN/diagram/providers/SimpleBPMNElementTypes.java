@@ -85,17 +85,14 @@ public class SimpleBPMNElementTypes {
 	 * @generated
 	 */
 	public static final IElementType Group_2009 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Group_2009"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType MessageFlow_4001 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */
 	public static final IElementType SequenceFlow_4002 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4002"); //$NON-NLS-1$
-
 	/**
 	 * @generated
 	 */

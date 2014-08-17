@@ -12,8 +12,8 @@
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="AND"
-          description="Create new AND">
+          title="AND Gateway"
+          description="Create new AND Gateway">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -30,8 +30,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="DataObject"
-          description="Create new DataObject">
+          title="Data Object"
+          description="Create new Data Object">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -66,8 +66,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="OR"
-          description="Create new OR">
+          title="OR Gateway"
+          description="Create new OR Gateway">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -84,8 +84,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="XOR"
-          description="Create new XOR">
+          title="XOR Gateway"
+          description="Create new XOR Gateway">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -107,8 +107,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="MessageFlow"
-          description="Create new MessageFlow">
+          title="Message Flow"
+          description="Create new Message Flow">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -116,8 +116,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="SequenceFlow"
-          description="Create new SequenceFlow">
+          title="Sequence Flow"
+          description="Create new Sequence Flow">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

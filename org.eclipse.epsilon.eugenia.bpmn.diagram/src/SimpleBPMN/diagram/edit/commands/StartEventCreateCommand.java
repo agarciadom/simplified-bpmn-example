@@ -18,12 +18,12 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class EventCreateCommand extends EditElementCommand {
+public class StartEventCreateCommand extends EditElementCommand {
 
 	/**
 	 * @generated
 	 */
-	public EventCreateCommand(CreateElementRequest req) {
+	public StartEventCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -53,8 +53,8 @@ public class EventCreateCommand extends EditElementCommand {
 	 */
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor,
 			IAdaptable info) throws ExecutionException {
-		SimpleBPMN.Event newElement = SimpleBPMN.SimpleBPMNFactory.eINSTANCE
-				.createEvent();
+		SimpleBPMN.StartEvent newElement = SimpleBPMN.SimpleBPMNFactory.eINSTANCE
+				.createStartEvent();
 
 		SimpleBPMN.BusinessProcessDiagram owner = (SimpleBPMN.BusinessProcessDiagram) getElementToEdit();
 		owner.getElements().add(newElement);
@@ -68,7 +68,7 @@ public class EventCreateCommand extends EditElementCommand {
 	/**
 	 * @generated
 	 */
-	protected void doConfigure(SimpleBPMN.Event newElement,
+	protected void doConfigure(SimpleBPMN.StartEvent newElement,
 			IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest())

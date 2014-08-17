@@ -9,22 +9,22 @@ import SimpleBPMN.BPMNElement;
 import SimpleBPMN.BusinessProcessDiagram;
 import SimpleBPMN.ConnectingObject;
 import SimpleBPMN.DataObject;
-import SimpleBPMN.Event;
-import SimpleBPMN.EventType;
+import SimpleBPMN.EndEvent;
 import SimpleBPMN.FlowObject;
 import SimpleBPMN.Gateway;
 import SimpleBPMN.Group;
+import SimpleBPMN.IntermediateEvent;
 import SimpleBPMN.Lane;
 import SimpleBPMN.MessageFlow;
 import SimpleBPMN.Pool;
 import SimpleBPMN.SequenceFlow;
 import SimpleBPMN.SimpleBPMNFactory;
 import SimpleBPMN.SimpleBPMNPackage;
+import SimpleBPMN.StartEvent;
 import SimpleBPMN.Swimlane;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -140,7 +140,21 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eventEClass = null;
+	private EClass startEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intermediateEventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass endEventEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,13 +183,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 	 * @generated
 	 */
 	private EClass groupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum eventTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -414,8 +421,8 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEvent() {
-		return eventEClass;
+	public EClass getStartEvent() {
+		return startEventEClass;
 	}
 
 	/**
@@ -423,8 +430,17 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEvent_Type() {
-		return (EAttribute)eventEClass.getEStructuralFeatures().get(0);
+	public EClass getIntermediateEvent() {
+		return intermediateEventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEndEvent() {
+		return endEventEClass;
 	}
 
 	/**
@@ -470,15 +486,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 	 */
 	public EReference getGroup_Elements() {
 		return (EReference)groupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEventType() {
-		return eventTypeEEnum;
 	}
 
 	/**
@@ -542,8 +549,11 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 
 		andEClass = createEClass(AND);
 
-		eventEClass = createEClass(EVENT);
-		createEAttribute(eventEClass, EVENT__TYPE);
+		startEventEClass = createEClass(START_EVENT);
+
+		intermediateEventEClass = createEClass(INTERMEDIATE_EVENT);
+
+		endEventEClass = createEClass(END_EVENT);
 
 		activityEClass = createEClass(ACTIVITY);
 
@@ -553,9 +563,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 
 		groupEClass = createEClass(GROUP);
 		createEReference(groupEClass, GROUP__ELEMENTS);
-
-		// Create enums
-		eventTypeEEnum = createEEnum(EVENT_TYPE);
 	}
 
 	/**
@@ -598,7 +605,9 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		xorEClass.getESuperTypes().add(this.getGateway());
 		orEClass.getESuperTypes().add(this.getGateway());
 		andEClass.getESuperTypes().add(this.getGateway());
-		eventEClass.getESuperTypes().add(this.getFlowObject());
+		startEventEClass.getESuperTypes().add(this.getFlowObject());
+		intermediateEventEClass.getESuperTypes().add(this.getFlowObject());
+		endEventEClass.getESuperTypes().add(this.getFlowObject());
 		activityEClass.getESuperTypes().add(this.getFlowObject());
 		artifactEClass.getESuperTypes().add(this.getBPMNElement());
 		dataObjectEClass.getESuperTypes().add(this.getArtifact());
@@ -638,8 +647,11 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 
 		initEClass(andEClass, SimpleBPMN.AND.class, "AND", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEvent_Type(), this.getEventType(), "type", null, 1, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(startEventEClass, StartEvent.class, "StartEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(intermediateEventEClass, IntermediateEvent.class, "IntermediateEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(endEventEClass, EndEvent.class, "EndEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(activityEClass, Activity.class, "Activity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -649,12 +661,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 
 		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroup_Elements(), this.getBPMNElement(), null, "elements", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		// Initialize enums and add enum literals
-		initEEnum(eventTypeEEnum, EventType.class, "EventType");
-		addEEnumLiteral(eventTypeEEnum, EventType.START);
-		addEEnumLiteral(eventTypeEEnum, EventType.INTERMEDIATE);
-		addEEnumLiteral(eventTypeEEnum, EventType.END);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -668,8 +674,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		createGmf_2Annotations();
 		// gmf.link
 		createGmf_3Annotations();
-		// gmf.label
-		createGmf_4Annotations();
 	}
 
 	/**
@@ -741,6 +745,29 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 			 "tool.name", "AND Gateway"
 		   });	
 		addAnnotation
+		  (startEventEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "Start Event",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false"
+		   });	
+		addAnnotation
+		  (intermediateEventEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "Intermediate Event"
+		   });	
+		addAnnotation
+		  (endEventEClass, 
+		   source, 
+		   new String[] {
+			 "tool.name", "End Event"
+		   });	
+		addAnnotation
 		  (artifactEClass, 
 		   source, 
 		   new String[] {
@@ -781,21 +808,6 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		   source, 
 		   new String[] {
 			 "tool.name", "Sequence Flow"
-		   });
-	}
-
-	/**
-	 * Initializes the annotations for <b>gmf.label</b>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void createGmf_4Annotations() {
-		String source = "gmf.label";	
-		addAnnotation
-		  (getEvent_Type(), 
-		   source, 
-		   new String[] {
 		   });
 	}
 

@@ -58,14 +58,28 @@ public class SimpleBPMNEditPartFactory implements EditPartFactory {
 			case SimpleBPMN.diagram.edit.parts.PoolNameEditPart.VISUAL_ID:
 				return new SimpleBPMN.diagram.edit.parts.PoolNameEditPart(view);
 
-			case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-				return new SimpleBPMN.diagram.edit.parts.EventEditPart(view);
+			case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.StartEventEditPart(
+						view);
 
-			case SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID:
-				return new SimpleBPMN.diagram.edit.parts.EventNameEditPart(view);
+			case SimpleBPMN.diagram.edit.parts.StartEventNameEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.StartEventNameEditPart(
+						view);
 
-			case SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID:
-				return new SimpleBPMN.diagram.edit.parts.EventTypeEditPart(view);
+			case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart(
+						view);
+
+			case SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart(
+						view);
+
+			case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.EndEventEditPart(view);
+
+			case SimpleBPMN.diagram.edit.parts.EndEventNameEditPart.VISUAL_ID:
+				return new SimpleBPMN.diagram.edit.parts.EndEventNameEditPart(
+						view);
 
 			case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 				return new SimpleBPMN.diagram.edit.parts.ActivityEditPart(view);

@@ -15,7 +15,6 @@ import org.eclipse.gmf.runtime.common.ui.services.parser.ParserService;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ParserHintAdapter;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.gmf.tooling.runtime.parsers.EnumParser;
 
 /**
  * @generated
@@ -121,38 +120,58 @@ public class SimpleBPMNParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser eventName_5006Parser;
+	private IParser startEventName_5011Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEventName_5006Parser() {
-		if (eventName_5006Parser == null) {
+	private IParser getStartEventName_5011Parser() {
+		if (startEventName_5011Parser == null) {
 			EAttribute[] features = new EAttribute[] { SimpleBPMN.SimpleBPMNPackage.eINSTANCE
 					.getBPMNElement_Name() };
 			SimpleBPMN.diagram.parsers.MessageFormatParser parser = new SimpleBPMN.diagram.parsers.MessageFormatParser(
 					features);
-			eventName_5006Parser = parser;
+			startEventName_5011Parser = parser;
 		}
-		return eventName_5006Parser;
+		return startEventName_5011Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	private IParser eventType_5010Parser;
+	private IParser intermediateEventName_5012Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getEventType_5010Parser() {
-		if (eventType_5010Parser == null) {
-			EAttribute editableFeature = SimpleBPMN.SimpleBPMNPackage.eINSTANCE
-					.getEvent_Type();
-			EnumParser parser = new EnumParser(editableFeature);
-			eventType_5010Parser = parser;
+	private IParser getIntermediateEventName_5012Parser() {
+		if (intermediateEventName_5012Parser == null) {
+			EAttribute[] features = new EAttribute[] { SimpleBPMN.SimpleBPMNPackage.eINSTANCE
+					.getBPMNElement_Name() };
+			SimpleBPMN.diagram.parsers.MessageFormatParser parser = new SimpleBPMN.diagram.parsers.MessageFormatParser(
+					features);
+			intermediateEventName_5012Parser = parser;
 		}
-		return eventType_5010Parser;
+		return intermediateEventName_5012Parser;
+	}
+
+	/**
+	 * @generated
+	 */
+	private IParser endEventName_5013Parser;
+
+	/**
+	 * @generated
+	 */
+	private IParser getEndEventName_5013Parser() {
+		if (endEventName_5013Parser == null) {
+			EAttribute[] features = new EAttribute[] { SimpleBPMN.SimpleBPMNPackage.eINSTANCE
+					.getBPMNElement_Name() };
+			SimpleBPMN.diagram.parsers.MessageFormatParser parser = new SimpleBPMN.diagram.parsers.MessageFormatParser(
+					features);
+			endEventName_5013Parser = parser;
+		}
+		return endEventName_5013Parser;
 	}
 
 	/**
@@ -284,11 +303,12 @@ public class SimpleBPMNParserProvider extends AbstractProvider implements
 			return getLaneName_5004Parser();
 		case SimpleBPMN.diagram.edit.parts.PoolNameEditPart.VISUAL_ID:
 			return getPoolName_5005Parser();
-		case SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID:
-			return getEventName_5006Parser();
-
-		case SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID:
-			return getEventType_5010Parser();
+		case SimpleBPMN.diagram.edit.parts.StartEventNameEditPart.VISUAL_ID:
+			return getStartEventName_5011Parser();
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart.VISUAL_ID:
+			return getIntermediateEventName_5012Parser();
+		case SimpleBPMN.diagram.edit.parts.EndEventNameEditPart.VISUAL_ID:
+			return getEndEventName_5013Parser();
 		case SimpleBPMN.diagram.edit.parts.ActivityNameEditPart.VISUAL_ID:
 			return getActivityName_5007Parser();
 		case SimpleBPMN.diagram.edit.parts.DataObjectNameEditPart.VISUAL_ID:

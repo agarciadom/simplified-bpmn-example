@@ -4,7 +4,6 @@ package SimpleBPMN;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -530,14 +529,14 @@ public interface SimpleBPMNPackage extends EPackage {
 	int AND_FEATURE_COUNT = GATEWAY_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link SimpleBPMN.impl.EventImpl <em>Event</em>}' class.
+	 * The meta object id for the '{@link SimpleBPMN.impl.StartEventImpl <em>Start Event</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see SimpleBPMN.impl.EventImpl
-	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEvent()
+	 * @see SimpleBPMN.impl.StartEventImpl
+	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getStartEvent()
 	 * @generated
 	 */
-	int EVENT = 14;
+	int START_EVENT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -546,25 +545,72 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__NAME = FLOW_OBJECT__NAME;
+	int START_EVENT__NAME = FLOW_OBJECT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * The number of structural features of the '<em>Start Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__TYPE = FLOW_OBJECT_FEATURE_COUNT + 0;
+	int START_EVENT_FEATURE_COUNT = FLOW_OBJECT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Event</em>' class.
+	 * The meta object id for the '{@link SimpleBPMN.impl.IntermediateEventImpl <em>Intermediate Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SimpleBPMN.impl.IntermediateEventImpl
+	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getIntermediateEvent()
+	 * @generated
+	 */
+	int INTERMEDIATE_EVENT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_FEATURE_COUNT = FLOW_OBJECT_FEATURE_COUNT + 1;
+	int INTERMEDIATE_EVENT__NAME = FLOW_OBJECT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Intermediate Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMEDIATE_EVENT_FEATURE_COUNT = FLOW_OBJECT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link SimpleBPMN.impl.EndEventImpl <em>End Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see SimpleBPMN.impl.EndEventImpl
+	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEndEvent()
+	 * @generated
+	 */
+	int END_EVENT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__NAME = FLOW_OBJECT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>End Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT_FEATURE_COUNT = FLOW_OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link SimpleBPMN.impl.ActivityImpl <em>Activity</em>}' class.
@@ -574,7 +620,7 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 15;
+	int ACTIVITY = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -602,7 +648,7 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getArtifact()
 	 * @generated
 	 */
-	int ARTIFACT = 16;
+	int ARTIFACT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -630,7 +676,7 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getDataObject()
 	 * @generated
 	 */
-	int DATA_OBJECT = 17;
+	int DATA_OBJECT = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -658,7 +704,7 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getGroup()
 	 * @generated
 	 */
-	int GROUP = 18;
+	int GROUP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -686,16 +732,6 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @ordered
 	 */
 	int GROUP_FEATURE_COUNT = ARTIFACT_FEATURE_COUNT + 1;
-
-	/**
-	 * The meta object id for the '{@link SimpleBPMN.EventType <em>Event Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see SimpleBPMN.EventType
-	 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEventType()
-	 * @generated
-	 */
-	int EVENT_TYPE = 19;
 
 
 	/**
@@ -894,25 +930,34 @@ public interface SimpleBPMNPackage extends EPackage {
 	EClass getAND();
 
 	/**
-	 * Returns the meta object for class '{@link SimpleBPMN.Event <em>Event</em>}'.
+	 * Returns the meta object for class '{@link SimpleBPMN.StartEvent <em>Start Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Event</em>'.
-	 * @see SimpleBPMN.Event
+	 * @return the meta object for class '<em>Start Event</em>'.
+	 * @see SimpleBPMN.StartEvent
 	 * @generated
 	 */
-	EClass getEvent();
+	EClass getStartEvent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link SimpleBPMN.Event#getType <em>Type</em>}'.
+	 * Returns the meta object for class '{@link SimpleBPMN.IntermediateEvent <em>Intermediate Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see SimpleBPMN.Event#getType()
-	 * @see #getEvent()
+	 * @return the meta object for class '<em>Intermediate Event</em>'.
+	 * @see SimpleBPMN.IntermediateEvent
 	 * @generated
 	 */
-	EAttribute getEvent_Type();
+	EClass getIntermediateEvent();
+
+	/**
+	 * Returns the meta object for class '{@link SimpleBPMN.EndEvent <em>End Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>End Event</em>'.
+	 * @see SimpleBPMN.EndEvent
+	 * @generated
+	 */
+	EClass getEndEvent();
 
 	/**
 	 * Returns the meta object for class '{@link SimpleBPMN.Activity <em>Activity</em>}'.
@@ -964,16 +1009,6 @@ public interface SimpleBPMNPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGroup_Elements();
-
-	/**
-	 * Returns the meta object for enum '{@link SimpleBPMN.EventType <em>Event Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Event Type</em>'.
-	 * @see SimpleBPMN.EventType
-	 * @generated
-	 */
-	EEnum getEventType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1178,22 +1213,34 @@ public interface SimpleBPMNPackage extends EPackage {
 		EClass AND = eINSTANCE.getAND();
 
 		/**
-		 * The meta object literal for the '{@link SimpleBPMN.impl.EventImpl <em>Event</em>}' class.
+		 * The meta object literal for the '{@link SimpleBPMN.impl.StartEventImpl <em>Start Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see SimpleBPMN.impl.EventImpl
-		 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEvent()
+		 * @see SimpleBPMN.impl.StartEventImpl
+		 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getStartEvent()
 		 * @generated
 		 */
-		EClass EVENT = eINSTANCE.getEvent();
+		EClass START_EVENT = eINSTANCE.getStartEvent();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '{@link SimpleBPMN.impl.IntermediateEventImpl <em>Intermediate Event</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see SimpleBPMN.impl.IntermediateEventImpl
+		 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getIntermediateEvent()
 		 * @generated
 		 */
-		EAttribute EVENT__TYPE = eINSTANCE.getEvent_Type();
+		EClass INTERMEDIATE_EVENT = eINSTANCE.getIntermediateEvent();
+
+		/**
+		 * The meta object literal for the '{@link SimpleBPMN.impl.EndEventImpl <em>End Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see SimpleBPMN.impl.EndEventImpl
+		 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEndEvent()
+		 * @generated
+		 */
+		EClass END_EVENT = eINSTANCE.getEndEvent();
 
 		/**
 		 * The meta object literal for the '{@link SimpleBPMN.impl.ActivityImpl <em>Activity</em>}' class.
@@ -1242,16 +1289,6 @@ public interface SimpleBPMNPackage extends EPackage {
 		 * @generated
 		 */
 		EReference GROUP__ELEMENTS = eINSTANCE.getGroup_Elements();
-
-		/**
-		 * The meta object literal for the '{@link SimpleBPMN.EventType <em>Event Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see SimpleBPMN.EventType
-		 * @see SimpleBPMN.impl.SimpleBPMNPackageImpl#getEventType()
-		 * @generated
-		 */
-		EEnum EVENT_TYPE = eINSTANCE.getEventType();
 
 	}
 

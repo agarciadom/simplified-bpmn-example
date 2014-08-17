@@ -5,7 +5,6 @@ package SimpleBPMN.impl;
 import SimpleBPMN.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -67,42 +66,14 @@ public class SimpleBPMNFactoryImpl extends EFactoryImpl implements SimpleBPMNFac
 			case SimpleBPMNPackage.XOR: return createXOR();
 			case SimpleBPMNPackage.OR: return createOR();
 			case SimpleBPMNPackage.AND: return createAND();
-			case SimpleBPMNPackage.EVENT: return createEvent();
+			case SimpleBPMNPackage.START_EVENT: return createStartEvent();
+			case SimpleBPMNPackage.INTERMEDIATE_EVENT: return createIntermediateEvent();
+			case SimpleBPMNPackage.END_EVENT: return createEndEvent();
 			case SimpleBPMNPackage.ACTIVITY: return createActivity();
 			case SimpleBPMNPackage.DATA_OBJECT: return createDataObject();
 			case SimpleBPMNPackage.GROUP: return createGroup();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case SimpleBPMNPackage.EVENT_TYPE:
-				return createEventTypeFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case SimpleBPMNPackage.EVENT_TYPE:
-				return convertEventTypeToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -211,9 +182,29 @@ public class SimpleBPMNFactoryImpl extends EFactoryImpl implements SimpleBPMNFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Event createEvent() {
-		EventImpl event = new EventImpl();
-		return event;
+	public StartEvent createStartEvent() {
+		StartEventImpl startEvent = new StartEventImpl();
+		return startEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntermediateEvent createIntermediateEvent() {
+		IntermediateEventImpl intermediateEvent = new IntermediateEventImpl();
+		return intermediateEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EndEvent createEndEvent() {
+		EndEventImpl endEvent = new EndEventImpl();
+		return endEvent;
 	}
 
 	/**
@@ -244,26 +235,6 @@ public class SimpleBPMNFactoryImpl extends EFactoryImpl implements SimpleBPMNFac
 	public Group createGroup() {
 		GroupImpl group = new GroupImpl();
 		return group;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EventType createEventTypeFromString(EDataType eDataType, String initialValue) {
-		EventType result = EventType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEventTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

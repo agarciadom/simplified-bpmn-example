@@ -28,13 +28,14 @@ import org.eclipse.gmf.runtime.diagram.ui.editpolicies.LabelDirectEditPolicy;
 import org.eclipse.gmf.runtime.diagram.ui.l10n.DiagramColorRegistry;
 import org.eclipse.gmf.runtime.diagram.ui.label.ILabelDelegate;
 import org.eclipse.gmf.runtime.diagram.ui.label.WrappingLabelDelegate;
+import org.eclipse.gmf.runtime.diagram.ui.requests.RequestConstants;
+import org.eclipse.gmf.runtime.diagram.ui.tools.TextDirectEditManager;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter;
 import org.eclipse.gmf.runtime.emf.ui.services.parser.ISemanticParser;
 import org.eclipse.gmf.runtime.notation.FontStyle;
 import org.eclipse.gmf.runtime.notation.NotationPackage;
 import org.eclipse.gmf.runtime.notation.View;
-import org.eclipse.gmf.tooling.runtime.directedit.ComboDirectEditManager;
 import org.eclipse.gmf.tooling.runtime.draw2d.labels.SimpleLabelDelegate;
 import org.eclipse.gmf.tooling.runtime.edit.policies.DefaultNodeLabelDragPolicy;
 import org.eclipse.gmf.tooling.runtime.edit.policies.labels.IRefreshableFeedbackEditPolicy;
@@ -49,13 +50,13 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class EventTypeEditPart extends CompartmentEditPart implements
+public class EndEventNameEditPart extends CompartmentEditPart implements
 		ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5010;
+	public static final int VISUAL_ID = 5013;
 
 	/**
 	 * @generated
@@ -85,7 +86,7 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public EventTypeEditPart(View view) {
+	public EndEventNameEditPart(View view) {
 		super(view);
 	}
 
@@ -194,7 +195,12 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 	 * @generated
 	 */
 	protected Image getLabelIcon() {
-		return null;
+		EObject parserElement = getParserElement();
+		if (parserElement == null) {
+			return null;
+		}
+		return SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
+				.getImage(parserElement.eClass());
 	}
 
 	/**
@@ -302,10 +308,10 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 					.getParser(
-							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006,
+							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012,
 							getParserElement(),
 							SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-									.getType(SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID));
+									.getType(SimpleBPMN.diagram.edit.parts.EndEventNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}
@@ -315,7 +321,7 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 	 */
 	protected DirectEditManager getManager() {
 		if (manager == null) {
-			setManager(new ComboDirectEditManager(this, null,
+			setManager(new TextDirectEditManager(this, null,
 					SimpleBPMN.diagram.edit.parts.SimpleBPMNEditPartFactory
 							.getTextCellEditorLocator(this)));
 		}
@@ -340,9 +346,21 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 	 * @generated
 	 */
 	protected void performDirectEdit(Point eventLocation) {
-		if (getManager().getClass() == ComboDirectEditManager.class) {
-			((ComboDirectEditManager) getManager()).show(eventLocation
+		if (getManager().getClass() == TextDirectEditManager.class) {
+			((TextDirectEditManager) getManager()).show(eventLocation
 					.getSWTPoint());
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private void performDirectEdit(char initialCharacter) {
+		if (getManager() instanceof TextDirectEditManager) {
+			((TextDirectEditManager) getManager()).show(initialCharacter);
+		} else //
+		{
+			performDirectEdit();
 		}
 	}
 
@@ -356,7 +374,14 @@ public class EventTypeEditPart extends CompartmentEditPart implements
 
 				public void run() {
 					if (isActive() && isEditable()) {
-						if ((theRequest instanceof DirectEditRequest)
+						if (theRequest
+								.getExtendedData()
+								.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR) instanceof Character) {
+							Character initialChar = (Character) theRequest
+									.getExtendedData()
+									.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
+							performDirectEdit(initialChar.charValue());
+						} else if ((theRequest instanceof DirectEditRequest)
 								&& (getEditText().equals(getLabelText()))) {
 							DirectEditRequest editRequest = (DirectEditRequest) theRequest;
 							performDirectEdit(editRequest.getLocation());

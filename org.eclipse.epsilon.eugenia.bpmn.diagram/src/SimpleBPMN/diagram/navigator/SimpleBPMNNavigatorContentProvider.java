@@ -275,7 +275,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getChildrenByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement,
+					false));
+			connectedViews = getChildrenByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement,
 					false));
 			connectedViews = getChildrenByType(
@@ -482,14 +494,14 @@ public class SimpleBPMNNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID: {
+		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID: {
 			LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem> result = new LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup incominglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
-					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Event_2006_incominglinks,
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Activity_2007_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup outgoinglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
-					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Event_2006_outgoinglinks,
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Activity_2007_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(
@@ -537,14 +549,124 @@ public class SimpleBPMNNavigatorContentProvider implements
 			return result.toArray();
 		}
 
-		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID: {
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID: {
 			LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem> result = new LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup incominglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
-					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Activity_2007_incominglinks,
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_StartEvent_2010_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup outgoinglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
-					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_Activity_2007_outgoinglinks,
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_StartEvent_2010_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID: {
+			LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem> result = new LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup incominglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_IntermediateEvent_2011_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup outgoinglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_IntermediateEvent_2011_outgoinglinks,
+					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			connectedViews = getIncomingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews,
+					incominglinks, true));
+			connectedViews = getOutgoingLinksByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews,
+					outgoinglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			if (!outgoinglinks.isEmpty()) {
+				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID: {
+			LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem> result = new LinkedList<SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup incominglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_EndEvent_2012_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup outgoinglinks = new SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorGroup(
+					SimpleBPMN.diagram.part.Messages.NavigatorGroupName_EndEvent_2012_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(
@@ -623,7 +745,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(
@@ -653,7 +787,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(
@@ -702,7 +848,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(
@@ -732,7 +890,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(
@@ -781,7 +951,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksTargetByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target,
+					true));
+			connectedViews = getLinksTargetByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target,
 					true));
 			connectedViews = getLinksTargetByType(
@@ -811,7 +993,19 @@ public class SimpleBPMNNavigatorContentProvider implements
 			connectedViews = getLinksSourceByType(
 					Collections.singleton(sv),
 					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-							.getType(SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID));
+							.getType(SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source,
+					true));
+			connectedViews = getLinksSourceByType(
+					Collections.singleton(sv),
+					SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+							.getType(SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source,
 					true));
 			connectedViews = getLinksSourceByType(

@@ -286,12 +286,12 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Event4CreationTool_title;
+	public static String EndEvent4CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Event4CreationTool_desc;
+	public static String EndEvent4CreationTool_desc;
 
 	/**
 	 * @generated
@@ -306,42 +306,62 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String Lane6CreationTool_title;
+	public static String IntermediateEvent6CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Lane6CreationTool_desc;
+	public static String IntermediateEvent6CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String ORGateway7CreationTool_title;
+	public static String Lane7CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String ORGateway7CreationTool_desc;
+	public static String Lane7CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String Pool8CreationTool_title;
+	public static String ORGateway8CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String Pool8CreationTool_desc;
+	public static String ORGateway8CreationTool_desc;
 
 	/**
 	 * @generated
 	 */
-	public static String XORGateway9CreationTool_title;
+	public static String Pool9CreationTool_title;
 
 	/**
 	 * @generated
 	 */
-	public static String XORGateway9CreationTool_desc;
+	public static String Pool9CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String StartEvent10CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String StartEvent10CreationTool_desc;
+
+	/**
+	 * @generated
+	 */
+	public static String XORGateway11CreationTool_title;
+
+	/**
+	 * @generated
+	 */
+	public static String XORGateway11CreationTool_desc;
 
 	/**
 	 * @generated
@@ -416,22 +436,42 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
-	public static String NavigatorGroupName_Event_2006_incominglinks;
-
-	/**
-	 * @generated
-	 */
-	public static String NavigatorGroupName_Event_2006_outgoinglinks;
-
-	/**
-	 * @generated
-	 */
 	public static String NavigatorGroupName_Activity_2007_incominglinks;
 
 	/**
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Activity_2007_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_StartEvent_2010_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_StartEvent_2010_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_IntermediateEvent_2011_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_IntermediateEvent_2011_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_EndEvent_2012_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_EndEvent_2012_outgoinglinks;
 
 	/**
 	 * @generated

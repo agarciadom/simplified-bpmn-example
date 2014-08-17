@@ -39,8 +39,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Event"
-          description="Create new Event">
+          title="End Event"
+          description="Create new End Event">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -50,6 +50,15 @@
           xsi:type="gmftool:CreationTool"
           title="Group"
           description="Create new Group">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Intermediate Event"
+          description="Create new Intermediate Event">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -77,6 +86,15 @@
           xsi:type="gmftool:CreationTool"
           title="Pool"
           description="Create new Pool">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Start Event"
+          description="Create new Start Event">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

@@ -21,7 +21,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.8"/>
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.10"/>
       <diagramNode
           href="simplebpmn.gmfgraph#XOR"/>
     </ownedChild>
@@ -41,7 +41,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.6"/>
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.7"/>
       <diagramNode
           href="simplebpmn.gmfgraph#OR"/>
     </ownedChild>
@@ -81,7 +81,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.6"/>
       <diagramNode
           href="simplebpmn.gmfgraph#Lane"/>
     </ownedChild>
@@ -101,7 +101,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.7"/>
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.8"/>
       <diagramNode
           href="simplebpmn.gmfgraph#Pool"/>
     </ownedChild>
@@ -111,26 +111,59 @@
         href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
     <ownedChild>
       <domainMetaElement
-          href="simplebpmn.ecore#//Event"/>
+          href="simplebpmn.ecore#//StartEvent"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="simplebpmn.gmfgraph#EventLabel"/>
+            href="simplebpmn.gmfgraph#StartEventLabel"/>
         <features
             href="simplebpmn.ecore#//BPMNElement/name"/>
       </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.9"/>
+      <diagramNode
+          href="simplebpmn.gmfgraph#StartEvent"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+    <ownedChild>
+      <domainMetaElement
+          href="simplebpmn.ecore#//IntermediateEvent"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="simplebpmn.gmfgraph#EventTypeLabel"/>
+            href="simplebpmn.gmfgraph#IntermediateEventLabel"/>
         <features
-            href="simplebpmn.ecore#//Event/type"/>
+            href="simplebpmn.ecore#//BPMNElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="simplebpmn.gmftool#//@palette/@tools.0/@tools.5"/>
+      <diagramNode
+          href="simplebpmn.gmfgraph#IntermediateEvent"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+    <ownedChild>
+      <domainMetaElement
+          href="simplebpmn.ecore#//EndEvent"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="simplebpmn.gmfgraph#EndEventLabel"/>
+        <features
+            href="simplebpmn.ecore#//BPMNElement/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="simplebpmn.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
-          href="simplebpmn.gmfgraph#Event"/>
+          href="simplebpmn.gmfgraph#EndEvent"/>
     </ownedChild>
   </nodes>
   <nodes>

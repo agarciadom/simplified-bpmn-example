@@ -98,7 +98,9 @@ public class BusinessProcessDiagramCanonicalEditPolicy extends
 		case SimpleBPMN.diagram.edit.parts.ANDEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.LaneEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.GroupEditPart.VISUAL_ID:
@@ -320,10 +322,26 @@ public class BusinessProcessDiagramCanonicalEditPolicy extends
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID: {
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
-						.getEvent_2006ContainedLinks(view));
+						.getStartEvent_2010ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getIntermediateEvent_2011ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getEndEvent_2012ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

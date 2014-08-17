@@ -19,14 +19,14 @@ import org.eclipse.gmf.runtime.notation.View;
 /**
  * @generated
  */
-public class EventItemSemanticEditPolicy extends
+public class EndEventItemSemanticEditPolicy extends
 		SimpleBPMN.diagram.edit.policies.SimpleBPMNBaseItemSemanticEditPolicy {
 
 	/**
 	 * @generated
 	 */
-	public EventItemSemanticEditPolicy() {
-		super(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+	public EndEventItemSemanticEditPolicy() {
+		super(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 	}
 
 	/**

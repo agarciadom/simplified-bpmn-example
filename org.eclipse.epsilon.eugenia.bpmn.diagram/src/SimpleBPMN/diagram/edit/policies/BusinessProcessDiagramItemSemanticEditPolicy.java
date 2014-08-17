@@ -53,9 +53,19 @@ public class BusinessProcessDiagramItemSemanticEditPolicy extends
 			return getGEFWrapper(new SimpleBPMN.diagram.edit.commands.PoolCreateCommand(
 					req));
 		}
-		if (SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006 == req
+		if (SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010 == req
 				.getElementType()) {
-			return getGEFWrapper(new SimpleBPMN.diagram.edit.commands.EventCreateCommand(
+			return getGEFWrapper(new SimpleBPMN.diagram.edit.commands.StartEventCreateCommand(
+					req));
+		}
+		if (SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011 == req
+				.getElementType()) {
+			return getGEFWrapper(new SimpleBPMN.diagram.edit.commands.IntermediateEventCreateCommand(
+					req));
+		}
+		if (SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012 == req
+				.getElementType()) {
+			return getGEFWrapper(new SimpleBPMN.diagram.edit.commands.EndEventCreateCommand(
 					req));
 		}
 		if (SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007 == req

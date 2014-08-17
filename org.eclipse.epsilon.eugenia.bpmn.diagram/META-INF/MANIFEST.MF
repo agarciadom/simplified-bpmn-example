@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: SimpleBPMN.diagram.edit.parts, 
+Export-Package: SimpleBPMN.diagram.edit.parts,
  SimpleBPMN.diagram.part,
  SimpleBPMN.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,
@@ -36,6 +36,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.gmf.tooling.runtime;visibility:=reexport,
  org.eclipse.draw2d;visibility:=reexport,
  org.eclipse.gmf.runtime.draw2d.ui;visibility:=reexport,
+ org.eclipse.gmf.runtime.lite.svg;visibility:=reexport,
  org.eclipse.epsilon.eugenia.bpmn;visibility:=reexport,
  org.eclipse.epsilon.eugenia.bpmn.edit;visibility:=reexport,
  org.eclipse.emf.validation;visibility:=reexport,

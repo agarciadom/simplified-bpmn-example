@@ -174,11 +174,27 @@ public class SimpleBPMNSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case SimpleBPMNPackage.EVENT: {
-				Event event = (Event)theEObject;
-				T result = caseEvent(event);
-				if (result == null) result = caseFlowObject(event);
-				if (result == null) result = caseBPMNElement(event);
+			case SimpleBPMNPackage.START_EVENT: {
+				StartEvent startEvent = (StartEvent)theEObject;
+				T result = caseStartEvent(startEvent);
+				if (result == null) result = caseFlowObject(startEvent);
+				if (result == null) result = caseBPMNElement(startEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimpleBPMNPackage.INTERMEDIATE_EVENT: {
+				IntermediateEvent intermediateEvent = (IntermediateEvent)theEObject;
+				T result = caseIntermediateEvent(intermediateEvent);
+				if (result == null) result = caseFlowObject(intermediateEvent);
+				if (result == null) result = caseBPMNElement(intermediateEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case SimpleBPMNPackage.END_EVENT: {
+				EndEvent endEvent = (EndEvent)theEObject;
+				T result = caseEndEvent(endEvent);
+				if (result == null) result = caseFlowObject(endEvent);
+				if (result == null) result = caseBPMNElement(endEvent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -428,17 +444,47 @@ public class SimpleBPMNSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Event</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Start Event</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Event</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Start Event</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEvent(Event object) {
+	public T caseStartEvent(StartEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Intermediate Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Intermediate Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntermediateEvent(IntermediateEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>End Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>End Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEndEvent(EndEvent object) {
 		return null;
 	}
 

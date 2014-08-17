@@ -50,13 +50,13 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class EventNameEditPart extends CompartmentEditPart implements
-		ITextAwareEditPart {
+public class IntermediateEventNameEditPart extends CompartmentEditPart
+		implements ITextAwareEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5006;
+	public static final int VISUAL_ID = 5012;
 
 	/**
 	 * @generated
@@ -86,7 +86,7 @@ public class EventNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public EventNameEditPart(View view) {
+	public IntermediateEventNameEditPart(View view) {
 		super(view);
 	}
 
@@ -308,10 +308,10 @@ public class EventNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 					.getParser(
-							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006,
+							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011,
 							getParserElement(),
 							SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-									.getType(SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID));
+									.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

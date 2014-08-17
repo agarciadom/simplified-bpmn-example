@@ -92,27 +92,56 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2006" editPartClassName="EventEditPart" itemSemanticEditPolicyClassName="EventItemSemanticEditPolicy" canonicalEditPolicyClassName="EventCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EventGraphicalNodeEditPolicy" createCommandClassName="EventCreateCommand">
+    <topLevelNodes visualID="2010" editPartClassName="StartEventEditPart" itemSemanticEditPolicyClassName="StartEventItemSemanticEditPolicy" canonicalEditPolicyClassName="StartEventCanonicalEditPolicy" graphicalNodeEditPolicyClassName="StartEventGraphicalNodeEditPolicy" createCommandClassName="StartEventCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EventEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EventFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEventLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEventTypeLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEventLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEventLabelFigure.setText(&quot;Event&quot;);&#xA;&#xA;this.add(fFigureEventLabelFigure);&#xA;&#xA;&#xA;&#xA;fFigureEventTypeLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEventTypeLabelFigure.setText(&quot;&quot;);&#xA;&#xA;this.add(fFigureEventTypeLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEventLabelFigure() {&#xA;&#x9;&#x9;return fFigureEventLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEventTypeLabelFigure() {&#xA;&#x9;&#x9;return fFigureEventTypeLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="StartEventEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="StartEventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class StartEventFigure extends org.eclipse.gmf.runtime.lite.svg.SVGFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public StartEventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setURI(&quot;platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg&quot;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:ResizeConstraints" nonResizeHandles="31"/>
+      </viewmap>
       <modelFacet>
-        <metaClass href="simplebpmn.genmodel#//SimpleBPMN/Event"/>
+        <metaClass href="simplebpmn.genmodel#//SimpleBPMN/StartEvent"/>
         <containmentMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
         <childMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
       </modelFacet>
-      <labels visualID="5006" editPartClassName="EventNameEditPart" itemSemanticEditPolicyClassName="EventNameItemSemanticEditPolicy" elementIcon="true">
+      <labels xsi:type="gmfgen:GenExternalNodeLabel" visualID="5011" editPartClassName="StartEventNameEditPart" itemSemanticEditPolicyClassName="StartEventNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEventLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="StartEventLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class StartEventLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public StartEventLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;StartEvent&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
           <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/BPMNElement/name"/>
         </modelFacet>
       </labels>
-      <labels visualID="5010" editPartClassName="EventTypeEditPart" itemSemanticEditPolicyClassName="EventTypeItemSemanticEditPolicy">
+    </topLevelNodes>
+    <topLevelNodes visualID="2011" editPartClassName="IntermediateEventEditPart" itemSemanticEditPolicyClassName="IntermediateEventItemSemanticEditPolicy" canonicalEditPolicyClassName="IntermediateEventCanonicalEditPolicy" graphicalNodeEditPolicyClassName="IntermediateEventGraphicalNodeEditPolicy" createCommandClassName="IntermediateEventCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="IntermediateEventEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="IntermediateEventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class IntermediateEventFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureIntermediateEventLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public IntermediateEventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureIntermediateEventLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureIntermediateEventLabelFigure.setText(&quot;IntermediateEvent&quot;);&#xA;&#xA;this.add(fFigureIntermediateEventLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureIntermediateEventLabelFigure() {&#xA;&#x9;&#x9;return fFigureIntermediateEventLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="simplebpmn.genmodel#//SimpleBPMN/IntermediateEvent"/>
+        <containmentMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
+        <childMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
+      </modelFacet>
+      <labels visualID="5012" editPartClassName="IntermediateEventNameEditPart" itemSemanticEditPolicyClassName="IntermediateEventNameItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEventTypeLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.1">
-          <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/Event/type"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureIntermediateEventLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/BPMNElement/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2012" editPartClassName="EndEventEditPart" itemSemanticEditPolicyClassName="EndEventItemSemanticEditPolicy" canonicalEditPolicyClassName="EndEventCanonicalEditPolicy" graphicalNodeEditPolicyClassName="EndEventGraphicalNodeEditPolicy" createCommandClassName="EndEventCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="EndEventEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="EndEventFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EndEventFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureEndEventLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EndEventFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEndEventLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureEndEventLabelFigure.setText(&quot;EndEvent&quot;);&#xA;&#xA;this.add(fFigureEndEventLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureEndEventLabelFigure() {&#xA;&#x9;&#x9;return fFigureEndEventLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="simplebpmn.genmodel#//SimpleBPMN/EndEvent"/>
+        <containmentMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
+        <childMetaFeature href="simplebpmn.genmodel#//SimpleBPMN/BusinessProcessDiagram/elements"/>
+      </modelFacet>
+      <labels visualID="5013" editPartClassName="EndEventNameEditPart" itemSemanticEditPolicyClassName="EndEventNameItemSemanticEditPolicy" elementIcon="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureEndEventLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="simplebpmn.genmodel#//SimpleBPMN/BPMNElement/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -233,13 +262,15 @@
     <palette>
       <groups title="Objects" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="AND Gateway" description="Create new AND Gateway" genNodes="//@diagram/@topLevelNodes.2"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Activity" description="Create new Activity" genNodes="//@diagram/@topLevelNodes.6"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Data Object" description="Create new Data Object" genNodes="//@diagram/@topLevelNodes.7"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Event" description="Create new Event" genNodes="//@diagram/@topLevelNodes.5"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Group" description="Create new Group" genNodes="//@diagram/@topLevelNodes.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Activity" description="Create new Activity" genNodes="//@diagram/@topLevelNodes.8"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Data Object" description="Create new Data Object" genNodes="//@diagram/@topLevelNodes.9"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="End Event" description="Create new End Event" genNodes="//@diagram/@topLevelNodes.7"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Group" description="Create new Group" genNodes="//@diagram/@topLevelNodes.10"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Intermediate Event" description="Create new Intermediate Event" genNodes="//@diagram/@topLevelNodes.6"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Lane" description="Create new Lane" genNodes="//@diagram/@topLevelNodes.3"/>
         <entries xsi:type="gmfgen:ToolEntry" title="OR Gateway" description="Create new OR Gateway" genNodes="//@diagram/@topLevelNodes.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Pool" description="Create new Pool" genNodes="//@diagram/@topLevelNodes.4"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Start Event" description="Create new Start Event" genNodes="//@diagram/@topLevelNodes.5"/>
         <entries xsi:type="gmfgen:ToolEntry" title="XOR Gateway" description="Create new XOR Gateway" genNodes="//@diagram/@topLevelNodes.0"/>
       </groups>
       <groups title="Connections" collapse="true">
@@ -259,6 +290,7 @@
     <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
     <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+    <requiredPlugins>org.eclipse.gmf.runtime.lite.svg</requiredPlugins>
   </plugin>
   <editor/>
   <navigator>
@@ -272,6 +304,8 @@
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.6"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.7"/>
     <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.8"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.9"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.10"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
@@ -283,6 +317,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.7" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.8" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
@@ -293,6 +331,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.7" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@topLevelNodes.8" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
@@ -304,6 +346,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.7" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.8" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
@@ -314,6 +360,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.7" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.8" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.1" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram" child="//@diagram/@links.2" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
@@ -325,6 +375,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.6" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.7" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.8" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.2" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
@@ -335,6 +389,10 @@
     <childReferences parent="//@diagram/@topLevelNodes.5" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.6" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
     <childReferences parent="//@diagram/@topLevelNodes.6" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.7" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.7" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.2" child="//@diagram/@topLevelNodes.8" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.8" child="//@diagram/@links.2" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
   </navigator>
   <diagramUpdater/>
   <propertySheet>
@@ -350,8 +408,7 @@
   </propertySheet>
   <domainGenModel href="simplebpmn.genmodel#/"/>
   <labelParsers extensibleViaService="true">
-    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.8/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
-    <implementations xsi:type="gmfgen:PredefinedEnumParser" uses="//@diagram/@topLevelNodes.5/@labels.1/@modelFacet"/>
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.8/@labels.0/@modelFacet //@diagram/@topLevelNodes.9/@labels.0/@modelFacet //@diagram/@topLevelNodes.10/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet //@diagram/@links.1/@labels.0/@modelFacet //@diagram/@links.2/@labels.0/@modelFacet"/>
   </labelParsers>
   <contextMenus context="//@diagram">
     <items xsi:type="gmfgen:LoadResourceAction"/>

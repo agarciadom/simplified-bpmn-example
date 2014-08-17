@@ -61,15 +61,25 @@
       <details key="tool.name" value="AND Gateway"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//FlowObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//EventType">
-      <eAnnotations source="gmf.label"/>
-    </eStructuralFeatures>
+  <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="Start Event"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+    </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EventType">
-    <eLiterals name="START"/>
-    <eLiterals name="INTERMEDIATE" value="1"/>
-    <eLiterals name="END" value="2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntermediateEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="Intermediate Event"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndEvent" eSuperTypes="#//FlowObject">
+    <eAnnotations source="gmf.node">
+      <details key="tool.name" value="End Event"/>
+    </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//FlowObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="Artifact" abstract="true" eSuperTypes="#//BPMNElement">

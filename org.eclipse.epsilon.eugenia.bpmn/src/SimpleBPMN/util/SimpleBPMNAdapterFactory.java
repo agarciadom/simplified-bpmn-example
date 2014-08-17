@@ -124,8 +124,16 @@ public class SimpleBPMNAdapterFactory extends AdapterFactoryImpl {
 				return createANDAdapter();
 			}
 			@Override
-			public Adapter caseEvent(Event object) {
-				return createEventAdapter();
+			public Adapter caseStartEvent(StartEvent object) {
+				return createStartEventAdapter();
+			}
+			@Override
+			public Adapter caseIntermediateEvent(IntermediateEvent object) {
+				return createIntermediateEventAdapter();
+			}
+			@Override
+			public Adapter caseEndEvent(EndEvent object) {
+				return createEndEventAdapter();
 			}
 			@Override
 			public Adapter caseActivity(Activity object) {
@@ -360,16 +368,44 @@ public class SimpleBPMNAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link SimpleBPMN.Event <em>Event</em>}'.
+	 * Creates a new adapter for an object of class '{@link SimpleBPMN.StartEvent <em>Start Event</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see SimpleBPMN.Event
+	 * @see SimpleBPMN.StartEvent
 	 * @generated
 	 */
-	public Adapter createEventAdapter() {
+	public Adapter createStartEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link SimpleBPMN.IntermediateEvent <em>Intermediate Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see SimpleBPMN.IntermediateEvent
+	 * @generated
+	 */
+	public Adapter createIntermediateEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link SimpleBPMN.EndEvent <em>End Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see SimpleBPMN.EndEvent
+	 * @generated
+	 */
+	public Adapter createEndEventAdapter() {
 		return null;
 	}
 

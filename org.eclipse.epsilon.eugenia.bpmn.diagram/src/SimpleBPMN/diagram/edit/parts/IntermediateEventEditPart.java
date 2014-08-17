@@ -31,12 +31,12 @@ import org.eclipse.swt.graphics.Color;
 /**
  * @generated
  */
-public class EventEditPart extends ShapeNodeEditPart {
+public class IntermediateEventEditPart extends ShapeNodeEditPart {
 
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 2006;
+	public static final int VISUAL_ID = 2011;
 
 	/**
 	 * @generated
@@ -51,7 +51,7 @@ public class EventEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public EventEditPart(View view) {
+	public IntermediateEventEditPart(View view) {
 		super(view);
 	}
 
@@ -62,7 +62,7 @@ public class EventEditPart extends ShapeNodeEditPart {
 		super.createDefaultEditPolicies();
 		installEditPolicy(
 				EditPolicyRoles.SEMANTIC_ROLE,
-				new SimpleBPMN.diagram.edit.policies.EventItemSemanticEditPolicy());
+				new SimpleBPMN.diagram.edit.policies.IntermediateEventItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -98,28 +98,24 @@ public class EventEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		return primaryShape = new EventFigure();
+		return primaryShape = new IntermediateEventFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public EventFigure getPrimaryShape() {
-		return (EventFigure) primaryShape;
+	public IntermediateEventFigure getPrimaryShape() {
+		return (IntermediateEventFigure) primaryShape;
 	}
 
 	/**
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventNameEditPart) {
-			((SimpleBPMN.diagram.edit.parts.EventNameEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEventLabelFigure());
-			return true;
-		}
-		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventTypeEditPart) {
-			((SimpleBPMN.diagram.edit.parts.EventTypeEditPart) childEditPart)
-					.setLabel(getPrimaryShape().getFigureEventTypeLabelFigure());
+		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart) {
+			((SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart) childEditPart)
+					.setLabel(getPrimaryShape()
+							.getFigureIntermediateEventLabelFigure());
 			return true;
 		}
 		return false;
@@ -129,10 +125,7 @@ public class EventEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventNameEditPart) {
-			return true;
-		}
-		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.EventTypeEditPart) {
+		if (childEditPart instanceof SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart) {
 			return true;
 		}
 		return false;
@@ -256,7 +249,7 @@ public class EventEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
-				.getType(SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID));
+				.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -275,21 +268,17 @@ public class EventEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class EventFigure extends RoundedRectangle {
+	public class IntermediateEventFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureEventLabelFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigureEventTypeLabelFigure;
+		private WrappingLabel fFigureIntermediateEventLabelFigure;
 
 		/**
 		 * @generated
 		 */
-		public EventFigure() {
+		public IntermediateEventFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8),
 					getMapMode().DPtoLP(8)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
@@ -303,32 +292,19 @@ public class EventEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureEventLabelFigure = new WrappingLabel();
+			fFigureIntermediateEventLabelFigure = new WrappingLabel();
 
-			fFigureEventLabelFigure.setText("Event");
+			fFigureIntermediateEventLabelFigure.setText("IntermediateEvent");
 
-			this.add(fFigureEventLabelFigure);
-
-			fFigureEventTypeLabelFigure = new WrappingLabel();
-
-			fFigureEventTypeLabelFigure.setText("");
-
-			this.add(fFigureEventTypeLabelFigure);
+			this.add(fFigureIntermediateEventLabelFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureEventLabelFigure() {
-			return fFigureEventLabelFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigureEventTypeLabelFigure() {
-			return fFigureEventTypeLabelFigure;
+		public WrappingLabel getFigureIntermediateEventLabelFigure() {
+			return fFigureIntermediateEventLabelFigure;
 		}
 
 	}

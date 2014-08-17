@@ -84,7 +84,17 @@ public class SimpleBPMNDiagramUpdater {
 						childElement, visualID));
 				continue;
 			}
-			if (visualID == SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID) {
+			if (visualID == SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID) {
+				result.add(new SimpleBPMN.diagram.part.SimpleBPMNNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID) {
+				result.add(new SimpleBPMN.diagram.part.SimpleBPMNNodeDescriptor(
+						childElement, visualID));
+				continue;
+			}
+			if (visualID == SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID) {
 				result.add(new SimpleBPMN.diagram.part.SimpleBPMNNodeDescriptor(
 						childElement, visualID));
 				continue;
@@ -127,8 +137,12 @@ public class SimpleBPMNDiagramUpdater {
 			return getLane_2004ContainedLinks(view);
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
 			return getPool_2005ContainedLinks(view);
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-			return getEvent_2006ContainedLinks(view);
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+			return getStartEvent_2010ContainedLinks(view);
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+			return getIntermediateEvent_2011ContainedLinks(view);
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+			return getEndEvent_2012ContainedLinks(view);
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 			return getActivity_2007ContainedLinks(view);
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
@@ -162,8 +176,12 @@ public class SimpleBPMNDiagramUpdater {
 			return getLane_2004IncomingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
 			return getPool_2005IncomingLinks(view);
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-			return getEvent_2006IncomingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+			return getStartEvent_2010IncomingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+			return getIntermediateEvent_2011IncomingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+			return getEndEvent_2012IncomingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 			return getActivity_2007IncomingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
@@ -197,8 +215,12 @@ public class SimpleBPMNDiagramUpdater {
 			return getLane_2004OutgoingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
 			return getPool_2005OutgoingLinks(view);
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-			return getEvent_2006OutgoingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+			return getStartEvent_2010OutgoingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+			return getIntermediateEvent_2011OutgoingLinks(view);
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+			return getEndEvent_2012OutgoingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 			return getActivity_2007OutgoingLinks(view);
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
@@ -272,7 +294,23 @@ public class SimpleBPMNDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEvent_2006ContainedLinks(
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getStartEvent_2010ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getIntermediateEvent_2011ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEndEvent_2012ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -398,9 +436,48 @@ public class SimpleBPMNDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEvent_2006IncomingLinks(
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getStartEvent_2010IncomingLinks(
 			View view) {
-		SimpleBPMN.Event modelElement = (SimpleBPMN.Event) view.getElement();
+		SimpleBPMN.StartEvent modelElement = (SimpleBPMN.StartEvent) view
+				.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_MessageFlow_4001(
+				modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_SequenceFlow_4002(
+				modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Association_4003(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getIntermediateEvent_2011IncomingLinks(
+			View view) {
+		SimpleBPMN.IntermediateEvent modelElement = (SimpleBPMN.IntermediateEvent) view
+				.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_MessageFlow_4001(
+				modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_SequenceFlow_4002(
+				modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_Association_4003(
+				modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEndEvent_2012IncomingLinks(
+			View view) {
+		SimpleBPMN.EndEvent modelElement = (SimpleBPMN.EndEvent) view
+				.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
@@ -530,9 +607,38 @@ public class SimpleBPMNDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEvent_2006OutgoingLinks(
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getStartEvent_2010OutgoingLinks(
 			View view) {
-		SimpleBPMN.Event modelElement = (SimpleBPMN.Event) view.getElement();
+		SimpleBPMN.StartEvent modelElement = (SimpleBPMN.StartEvent) view
+				.getElement();
+		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_MessageFlow_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_SequenceFlow_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Association_4003(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getIntermediateEvent_2011OutgoingLinks(
+			View view) {
+		SimpleBPMN.IntermediateEvent modelElement = (SimpleBPMN.IntermediateEvent) view
+				.getElement();
+		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_MessageFlow_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_SequenceFlow_4002(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_Association_4003(modelElement));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> getEndEvent_2012OutgoingLinks(
+			View view) {
+		SimpleBPMN.EndEvent modelElement = (SimpleBPMN.EndEvent) view
+				.getElement();
 		LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor> result = new LinkedList<SimpleBPMN.diagram.part.SimpleBPMNLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_MessageFlow_4001(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_SequenceFlow_4002(modelElement));

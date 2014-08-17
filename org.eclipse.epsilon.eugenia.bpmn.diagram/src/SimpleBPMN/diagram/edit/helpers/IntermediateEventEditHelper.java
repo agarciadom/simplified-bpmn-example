@@ -6,6 +6,6 @@ package SimpleBPMN.diagram.edit.helpers;
 /**
  * @generated
  */
-public class EventEditHelper extends
+public class IntermediateEventEditHelper extends
 		SimpleBPMN.diagram.edit.helpers.SimpleBPMNBaseEditHelper {
 }

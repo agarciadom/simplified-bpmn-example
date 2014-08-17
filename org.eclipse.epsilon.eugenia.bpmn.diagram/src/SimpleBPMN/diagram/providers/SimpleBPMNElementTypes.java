@@ -72,7 +72,15 @@ public class SimpleBPMNElementTypes {
 	/**
 	 * @generated
 	 */
-	public static final IElementType Event_2006 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Event_2006"); //$NON-NLS-1$
+	public static final IElementType StartEvent_2010 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.StartEvent_2010"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType IntermediateEvent_2011 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.IntermediateEvent_2011"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType EndEvent_2012 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.EndEvent_2012"); //$NON-NLS-1$
 	/**
 	 * @generated
 	 */
@@ -155,8 +163,15 @@ public class SimpleBPMNElementTypes {
 			elements.put(Pool_2005,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getPool());
 
-			elements.put(Event_2006,
-					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEvent());
+			elements.put(StartEvent_2010,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getStartEvent());
+
+			elements.put(IntermediateEvent_2011,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE
+							.getIntermediateEvent());
+
+			elements.put(EndEvent_2012,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEndEvent());
 
 			elements.put(Activity_2007,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getActivity());
@@ -198,7 +213,9 @@ public class SimpleBPMNElementTypes {
 			KNOWN_ELEMENT_TYPES.add(AND_2003);
 			KNOWN_ELEMENT_TYPES.add(Lane_2004);
 			KNOWN_ELEMENT_TYPES.add(Pool_2005);
-			KNOWN_ELEMENT_TYPES.add(Event_2006);
+			KNOWN_ELEMENT_TYPES.add(StartEvent_2010);
+			KNOWN_ELEMENT_TYPES.add(IntermediateEvent_2011);
+			KNOWN_ELEMENT_TYPES.add(EndEvent_2012);
 			KNOWN_ELEMENT_TYPES.add(Activity_2007);
 			KNOWN_ELEMENT_TYPES.add(DataObject_2008);
 			KNOWN_ELEMENT_TYPES.add(Group_2009);
@@ -226,8 +243,12 @@ public class SimpleBPMNElementTypes {
 			return Lane_2004;
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
 			return Pool_2005;
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-			return Event_2006;
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+			return StartEvent_2010;
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+			return IntermediateEvent_2011;
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+			return EndEvent_2012;
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 			return Activity_2007;
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:

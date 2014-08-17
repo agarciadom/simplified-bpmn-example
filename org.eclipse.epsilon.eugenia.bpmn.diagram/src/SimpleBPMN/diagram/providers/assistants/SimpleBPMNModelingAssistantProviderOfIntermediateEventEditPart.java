@@ -14,7 +14,8 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 /**
  * @generated
  */
-public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
+public class SimpleBPMNModelingAssistantProviderOfIntermediateEventEditPart
+		extends
 		SimpleBPMN.diagram.providers.SimpleBPMNModelingAssistantProvider {
 
 	/**
@@ -24,14 +25,14 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSource((SimpleBPMN.diagram.edit.parts.XOREditPart) sourceEditPart);
+		return doGetRelTypesOnSource((SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) sourceEditPart);
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnSource(
-			SimpleBPMN.diagram.edit.parts.XOREditPart source) {
+			SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
@@ -50,7 +51,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetRelTypesOnSourceAndTarget(
-				(SimpleBPMN.diagram.edit.parts.XOREditPart) sourceEditPart,
+				(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) sourceEditPart,
 				targetEditPart);
 	}
 
@@ -58,7 +59,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnSourceAndTarget(
-			SimpleBPMN.diagram.edit.parts.XOREditPart source,
+			SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart source,
 			IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.XOREditPart) {
@@ -136,7 +137,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetTypesForTarget(
-				(SimpleBPMN.diagram.edit.parts.XOREditPart) sourceEditPart,
+				(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) sourceEditPart,
 				relationshipType);
 	}
 
@@ -144,7 +145,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetTypesForTarget(
-			SimpleBPMN.diagram.edit.parts.XOREditPart source,
+			SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart source,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001) {
@@ -182,14 +183,14 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnTarget((SimpleBPMN.diagram.edit.parts.XOREditPart) targetEditPart);
+		return doGetRelTypesOnTarget((SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) targetEditPart);
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnTarget(
-			SimpleBPMN.diagram.edit.parts.XOREditPart target) {
+			SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
@@ -206,7 +207,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetTypesForSource(
-				(SimpleBPMN.diagram.edit.parts.XOREditPart) targetEditPart,
+				(SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) targetEditPart,
 				relationshipType);
 	}
 
@@ -214,7 +215,7 @@ public class SimpleBPMNModelingAssistantProviderOfXOREditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetTypesForSource(
-			SimpleBPMN.diagram.edit.parts.XOREditPart target,
+			SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart target,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001) {

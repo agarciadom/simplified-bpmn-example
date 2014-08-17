@@ -73,15 +73,21 @@ class OR extends Gateway {
 class AND extends Gateway {
 }
 
-class Event extends FlowObject {
-	@gmf.label
-	attr EventType[1] type;
+@gmf.node(tool.name="Start Event",
+          figure="svg",
+          svg.uri="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg",
+          label.icon="false",
+          label.placement="external",
+          resizable="false")
+class StartEvent extends FlowObject {
 }
 
-enum EventType {
-	START;
-	INTERMEDIATE;
-	END;
+@gmf.node(tool.name="Intermediate Event")
+class IntermediateEvent extends FlowObject {
+}
+
+@gmf.node(tool.name="End Event")
+class EndEvent extends FlowObject {
 }
 
 class Activity extends FlowObject {

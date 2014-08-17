@@ -14,7 +14,7 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 /**
  * @generated
  */
-public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
+public class SimpleBPMNModelingAssistantProviderOfEndEventEditPart extends
 		SimpleBPMN.diagram.providers.SimpleBPMNModelingAssistantProvider {
 
 	/**
@@ -24,14 +24,14 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSource((SimpleBPMN.diagram.edit.parts.EventEditPart) sourceEditPart);
+		return doGetRelTypesOnSource((SimpleBPMN.diagram.edit.parts.EndEventEditPart) sourceEditPart);
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnSource(
-			SimpleBPMN.diagram.edit.parts.EventEditPart source) {
+			SimpleBPMN.diagram.edit.parts.EndEventEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
@@ -50,7 +50,7 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetRelTypesOnSourceAndTarget(
-				(SimpleBPMN.diagram.edit.parts.EventEditPart) sourceEditPart,
+				(SimpleBPMN.diagram.edit.parts.EndEventEditPart) sourceEditPart,
 				targetEditPart);
 	}
 
@@ -58,7 +58,7 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnSourceAndTarget(
-			SimpleBPMN.diagram.edit.parts.EventEditPart source,
+			SimpleBPMN.diagram.edit.parts.EndEventEditPart source,
 			IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.XOREditPart) {
@@ -70,7 +70,13 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ANDEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		}
-		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EventEditPart) {
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.StartEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EndEventEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		}
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ActivityEditPart) {
@@ -85,7 +91,13 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ANDEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
 		}
-		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EventEditPart) {
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.StartEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EndEventEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
 		}
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ActivityEditPart) {
@@ -100,7 +112,13 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ANDEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003);
 		}
-		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EventEditPart) {
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.StartEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart) {
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003);
+		}
+		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.EndEventEditPart) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003);
 		}
 		if (targetEditPart instanceof SimpleBPMN.diagram.edit.parts.ActivityEditPart) {
@@ -118,7 +136,7 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetTypesForTarget(
-				(SimpleBPMN.diagram.edit.parts.EventEditPart) sourceEditPart,
+				(SimpleBPMN.diagram.edit.parts.EndEventEditPart) sourceEditPart,
 				relationshipType);
 	}
 
@@ -126,26 +144,32 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetTypesForTarget(
-			SimpleBPMN.diagram.edit.parts.EventEditPart source,
+			SimpleBPMN.diagram.edit.parts.EndEventEditPart source,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		} else if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		} else if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		}
 		return types;
@@ -158,14 +182,14 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnTarget((SimpleBPMN.diagram.edit.parts.EventEditPart) targetEditPart);
+		return doGetRelTypesOnTarget((SimpleBPMN.diagram.edit.parts.EndEventEditPart) targetEditPart);
 	}
 
 	/**
 	 * @generated
 	 */
 	public List<IElementType> doGetRelTypesOnTarget(
-			SimpleBPMN.diagram.edit.parts.EventEditPart target) {
+			SimpleBPMN.diagram.edit.parts.EndEventEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
 		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
@@ -182,7 +206,7 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target
 				.getAdapter(IGraphicalEditPart.class);
 		return doGetTypesForSource(
-				(SimpleBPMN.diagram.edit.parts.EventEditPart) targetEditPart,
+				(SimpleBPMN.diagram.edit.parts.EndEventEditPart) targetEditPart,
 				relationshipType);
 	}
 
@@ -190,26 +214,32 @@ public class SimpleBPMNModelingAssistantProviderOfEventEditPart extends
 	 * @generated
 	 */
 	public List<IElementType> doGetTypesForSource(
-			SimpleBPMN.diagram.edit.parts.EventEditPart target,
+			SimpleBPMN.diagram.edit.parts.EndEventEditPart target,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		} else if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		} else if (relationshipType == SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003) {
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
-			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
 			types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
 		}
 		return types;

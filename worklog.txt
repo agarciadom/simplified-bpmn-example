@@ -1,3 +1,4 @@
+-- START --
 Github project creation: 17/Aug, 18:08
 Starting Eclipse: 18:10
 Eclipse started: 18:13
@@ -9,3 +10,7 @@ Third version (fixed missing from, to): 18:28
 Fourth version (changed @gmf.edge to @gmf.link): 18:30
 Tested version as basically working: 18:32
 v5 (customize tool names): 18:38
+-- STOP --
+Restart: 18:42
+v6 (change Event to StartEvent/IntermediateEvent/EndEvent to use SVG shapes, as we'd need Java code to change graphic on the fly): 18:44
+Start drawing SVG shapes: 18:46

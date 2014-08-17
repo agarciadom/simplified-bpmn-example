@@ -36,12 +36,14 @@ public class SimpleBPMNPaletteFactory {
 		paletteContainer.add(createANDGateway1CreationTool());
 		paletteContainer.add(createActivity2CreationTool());
 		paletteContainer.add(createDataObject3CreationTool());
-		paletteContainer.add(createEvent4CreationTool());
+		paletteContainer.add(createEndEvent4CreationTool());
 		paletteContainer.add(createGroup5CreationTool());
-		paletteContainer.add(createLane6CreationTool());
-		paletteContainer.add(createORGateway7CreationTool());
-		paletteContainer.add(createPool8CreationTool());
-		paletteContainer.add(createXORGateway9CreationTool());
+		paletteContainer.add(createIntermediateEvent6CreationTool());
+		paletteContainer.add(createLane7CreationTool());
+		paletteContainer.add(createORGateway8CreationTool());
+		paletteContainer.add(createPool9CreationTool());
+		paletteContainer.add(createStartEvent10CreationTool());
+		paletteContainer.add(createXORGateway11CreationTool());
 		return paletteContainer;
 	}
 
@@ -110,15 +112,15 @@ public class SimpleBPMNPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createEvent4CreationTool() {
+	private ToolEntry createEndEvent4CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				SimpleBPMN.diagram.part.Messages.Event4CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Event4CreationTool_desc,
+				SimpleBPMN.diagram.part.Messages.EndEvent4CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.EndEvent4CreationTool_desc,
 				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006));
-		entry.setId("createEvent4CreationTool"); //$NON-NLS-1$
+						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012));
+		entry.setId("createEndEvent4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
-				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Event_2006));
+				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -142,13 +144,29 @@ public class SimpleBPMNPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createLane6CreationTool() {
+	private ToolEntry createIntermediateEvent6CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				SimpleBPMN.diagram.part.Messages.Lane6CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Lane6CreationTool_desc,
+				SimpleBPMN.diagram.part.Messages.IntermediateEvent6CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.IntermediateEvent6CreationTool_desc,
+				Collections
+						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011));
+		entry.setId("createIntermediateEvent6CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
+				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createLane7CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				SimpleBPMN.diagram.part.Messages.Lane7CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.Lane7CreationTool_desc,
 				Collections
 						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_2004));
-		entry.setId("createLane6CreationTool"); //$NON-NLS-1$
+		entry.setId("createLane7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_2004));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -158,13 +176,13 @@ public class SimpleBPMNPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createORGateway7CreationTool() {
+	private ToolEntry createORGateway8CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				SimpleBPMN.diagram.part.Messages.ORGateway7CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.ORGateway7CreationTool_desc,
+				SimpleBPMN.diagram.part.Messages.ORGateway8CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.ORGateway8CreationTool_desc,
 				Collections
 						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002));
-		entry.setId("createORGateway7CreationTool"); //$NON-NLS-1$
+		entry.setId("createORGateway8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -174,13 +192,13 @@ public class SimpleBPMNPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createPool8CreationTool() {
+	private ToolEntry createPool9CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				SimpleBPMN.diagram.part.Messages.Pool8CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Pool8CreationTool_desc,
+				SimpleBPMN.diagram.part.Messages.Pool9CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.Pool9CreationTool_desc,
 				Collections
 						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_2005));
-		entry.setId("createPool8CreationTool"); //$NON-NLS-1$
+		entry.setId("createPool9CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_2005));
 		entry.setLargeIcon(entry.getSmallIcon());
@@ -190,13 +208,29 @@ public class SimpleBPMNPaletteFactory {
 	/**
 	 * @generated
 	 */
-	private ToolEntry createXORGateway9CreationTool() {
+	private ToolEntry createStartEvent10CreationTool() {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				SimpleBPMN.diagram.part.Messages.XORGateway9CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.XORGateway9CreationTool_desc,
+				SimpleBPMN.diagram.part.Messages.StartEvent10CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.StartEvent10CreationTool_desc,
+				Collections
+						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010));
+		entry.setId("createStartEvent10CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
+				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	 * @generated
+	 */
+	private ToolEntry createXORGateway11CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
+				SimpleBPMN.diagram.part.Messages.XORGateway11CreationTool_title,
+				SimpleBPMN.diagram.part.Messages.XORGateway11CreationTool_desc,
 				Collections
 						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001));
-		entry.setId("createXORGateway9CreationTool"); //$NON-NLS-1$
+		entry.setId("createXORGateway11CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001));
 		entry.setLargeIcon(entry.getSmallIcon());

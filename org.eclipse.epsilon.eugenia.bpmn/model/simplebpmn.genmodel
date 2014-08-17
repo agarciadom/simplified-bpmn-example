@@ -5,11 +5,6 @@
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>simplebpmn.emf</foreignModel>
   <genPackages prefix="SimpleBPMN" disposableProviderFactory="true" ecorePackage="simplebpmn.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simplebpmn.ecore#//EventType">
-      <genEnumLiterals ecoreEnumLiteral="simplebpmn.ecore#//EventType/START"/>
-      <genEnumLiterals ecoreEnumLiteral="simplebpmn.ecore#//EventType/INTERMEDIATE"/>
-      <genEnumLiterals ecoreEnumLiteral="simplebpmn.ecore#//EventType/END"/>
-    </genEnums>
     <genClasses ecoreClass="simplebpmn.ecore#//BusinessProcessDiagram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
     </genClasses>
@@ -33,9 +28,9 @@
     <genClasses ecoreClass="simplebpmn.ecore#//XOR"/>
     <genClasses ecoreClass="simplebpmn.ecore#//OR"/>
     <genClasses ecoreClass="simplebpmn.ecore#//AND"/>
-    <genClasses ecoreClass="simplebpmn.ecore#//Event">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplebpmn.ecore#//Event/type"/>
-    </genClasses>
+    <genClasses ecoreClass="simplebpmn.ecore#//StartEvent"/>
+    <genClasses ecoreClass="simplebpmn.ecore#//IntermediateEvent"/>
+    <genClasses ecoreClass="simplebpmn.ecore#//EndEvent"/>
     <genClasses ecoreClass="simplebpmn.ecore#//Activity"/>
     <genClasses image="false" ecoreClass="simplebpmn.ecore#//Artifact"/>
     <genClasses ecoreClass="simplebpmn.ecore#//DataObject"/>

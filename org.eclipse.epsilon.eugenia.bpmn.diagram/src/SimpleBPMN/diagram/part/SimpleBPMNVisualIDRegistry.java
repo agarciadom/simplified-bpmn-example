@@ -143,9 +143,17 @@ public class SimpleBPMNVisualIDRegistry {
 					domainElement.eClass())) {
 				return SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID;
 			}
-			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEvent()
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getStartEvent()
 					.isSuperTypeOf(domainElement.eClass())) {
-				return SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID;
+				return SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getIntermediateEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEndEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID;
 			}
 			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getActivity()
 					.isSuperTypeOf(domainElement.eClass())) {
@@ -204,7 +212,13 @@ public class SimpleBPMNVisualIDRegistry {
 			if (SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID == nodeVisualID) {
+			if (SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID == nodeVisualID) {
@@ -242,11 +256,18 @@ public class SimpleBPMNVisualIDRegistry {
 				return true;
 			}
 			break;
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
-			if (SimpleBPMN.diagram.edit.parts.EventNameEditPart.VISUAL_ID == nodeVisualID) {
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.StartEventNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (SimpleBPMN.diagram.edit.parts.EventTypeEditPart.VISUAL_ID == nodeVisualID) {
+			break;
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.IntermediateEventNameEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.EndEventNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -348,10 +369,12 @@ public class SimpleBPMNVisualIDRegistry {
 		case SimpleBPMN.diagram.edit.parts.ANDEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.LaneEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
-		case SimpleBPMN.diagram.edit.parts.EventEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.GroupEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

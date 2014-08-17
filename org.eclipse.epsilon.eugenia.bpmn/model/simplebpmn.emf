@@ -1,0 +1,99 @@
+@namespace(uri="http://eclipse.org/eugenia/simplebpmn", prefix="sbpmn")
+@gmf
+package SimpleBPMN;
+
+@gmf.diagram
+class BusinessProcessDiagram {
+	val BPMNElement[*] elements;
+}
+
+class BPMNElement {
+	attr String name;
+}
+
+/* SWIMLANES */
+
+@gmf.node
+abstract class Swimlane extends BPMNElement {
+	
+}
+
+class Lane extends Swimlane {
+	
+}
+
+class Pool extends Swimlane {
+	val Lane[*] lanes;
+}
+
+/* CONNECTING OBJECTS */
+
+@gmf.edge
+abstract class ConnectingObject extends BPMNElement {
+	ref FlowObject from;
+	ref FlowObject to;
+}
+
+class MessageFlow extends ConnectingObject {
+	
+}
+
+class SequenceFlow extends ConnectingObject {
+	
+}
+
+class Association extends ConnectingObject {
+	
+}
+
+/* FLOW OBJECTS */
+
+@gmf.node
+abstract class FlowObject extends BPMNElement {
+	
+}
+
+abstract class Gateway extends FlowObject {
+	
+}
+
+class XOR extends Gateway {
+	
+}
+
+class OR extends Gateway {
+	
+}
+
+class AND extends Gateway {
+	
+}
+
+class Event extends FlowObject {
+	attr EventType[1] type;
+}
+
+enum EventType {
+	START;
+	INTERMEDIATE;
+	END;
+}
+
+class Activity extends FlowObject {
+
+}
+
+/* ARTIFACTS */
+
+@gmf.node
+abstract class Artifact extends BPMNElement {
+	
+}
+
+class DataObject extends Artifact {
+	
+}
+
+class Group extends Artifact {
+	ref BPMNElement[*] elements;
+}

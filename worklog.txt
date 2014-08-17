@@ -1,1 +1,6 @@
-Project creation: 17/Aug, 18:08
+Github project creation: 17/Aug, 18:08
+Starting Eclipse: 18:10
+Eclipse started: 18:13
+Starting nested Eclipse: 18:13
+Nested Eclipse started: 18:14
+First version of .emf: 18:24

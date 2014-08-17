@@ -13,7 +13,7 @@ class BPMNElement {
 
 /* SWIMLANES */
 
-@gmf.node
+@gmf.node(label="name")
 abstract class Swimlane extends BPMNElement {
 	
 }
@@ -28,7 +28,7 @@ class Pool extends Swimlane {
 
 /* CONNECTING OBJECTS */
 
-@gmf.edge
+@gmf.link(label="name", source="from", target="to")
 abstract class ConnectingObject extends BPMNElement {
 	ref FlowObject from;
 	ref FlowObject to;
@@ -48,7 +48,7 @@ class Association extends ConnectingObject {
 
 /* FLOW OBJECTS */
 
-@gmf.node
+@gmf.node(label="name")
 abstract class FlowObject extends BPMNElement {
 	
 }
@@ -85,7 +85,7 @@ class Activity extends FlowObject {
 
 /* ARTIFACTS */
 
-@gmf.node
+@gmf.node(label="name")
 abstract class Artifact extends BPMNElement {
 	
 }

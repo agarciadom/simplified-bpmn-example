@@ -1,0 +1,7 @@
+# Tracing options for the org.eclipse.epsilon.eugenia.bpmn.diagram plug-in
+
+# Common issues
+org.eclipse.epsilon.eugenia.bpmn.diagram/debug=false
+
+# Visual IDs
+org.eclipse.epsilon.eugenia.bpmn.diagram/debug/visualID=false

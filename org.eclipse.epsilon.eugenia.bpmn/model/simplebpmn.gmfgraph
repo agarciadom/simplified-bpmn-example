@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="SimpleBPMN">
+  <figures name="Default">
+    <descriptors name="LaneFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="LaneFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="LaneLabelFigure" text="Lane"/>
+      </actualFigure>
+      <accessors accessor="getFigureLaneLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="PoolFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="PoolFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="PoolLabelFigure" text="Pool"/>
+      </actualFigure>
+      <accessors accessor="getFigurePoolLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="XORFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="XORFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="XORLabelFigure" text="XOR"/>
+      </actualFigure>
+      <accessors accessor="getFigureXORLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ORFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ORFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ORLabelFigure" text="OR"/>
+      </actualFigure>
+      <accessors accessor="getFigureORLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ANDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ANDFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ANDLabelFigure" text="AND"/>
+      </actualFigure>
+      <accessors accessor="getFigureANDLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EventFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EventFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EventLabelFigure" text="Event"/>
+      </actualFigure>
+      <accessors accessor="getFigureEventLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ActivityFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ActivityFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="ActivityLabelFigure" text="Activity"/>
+      </actualFigure>
+      <accessors accessor="getFigureActivityLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="DataObjectFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DataObjectFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DataObjectLabelFigure" text="DataObject"/>
+      </actualFigure>
+      <accessors accessor="getFigureDataObjectLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="GroupFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="GroupFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="GroupLabelFigure" text="Group"/>
+      </actualFigure>
+      <accessors accessor="getFigureGroupLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MessageFlowFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="MessageFlowFigure"/>
+    </descriptors>
+    <descriptors name="MessageFlowLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="MessageFlowLabelLabel" text="MessageFlow"/>
+    </descriptors>
+    <descriptors name="SequenceFlowFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="SequenceFlowFigure"/>
+    </descriptors>
+    <descriptors name="SequenceFlowLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="SequenceFlowLabelLabel" text="SequenceFlow"/>
+    </descriptors>
+    <descriptors name="AssociationFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AssociationFigure"/>
+    </descriptors>
+    <descriptors name="AssociationLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="AssociationLabelLabel" text="Association"/>
+    </descriptors>
+  </figures>
+  <nodes name="Lane" figure="LaneFigure"/>
+  <nodes name="Pool" figure="PoolFigure"/>
+  <nodes name="XOR" figure="XORFigure"/>
+  <nodes name="OR" figure="ORFigure"/>
+  <nodes name="AND" figure="ANDFigure"/>
+  <nodes name="Event" figure="EventFigure"/>
+  <nodes name="Activity" figure="ActivityFigure"/>
+  <nodes name="DataObject" figure="DataObjectFigure"/>
+  <nodes name="Group" figure="GroupFigure"/>
+  <connections name="MessageFlow" figure="MessageFlowFigure"/>
+  <connections name="SequenceFlow" figure="SequenceFlowFigure"/>
+  <connections name="Association" figure="AssociationFigure"/>
+  <labels name="LaneLabel" figure="LaneFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="PoolLabel" figure="PoolFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="XORLabel" figure="XORFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="ORLabel" figure="ORFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="ANDLabel" figure="ANDFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="EventLabel" figure="EventFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="ActivityLabel" figure="ActivityFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="DataObjectLabel" figure="DataObjectFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="GroupLabel" figure="GroupFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="MessageFlowLabel" figure="MessageFlowLabelFigure" elementIcon="false"/>
+  <labels name="SequenceFlowLabel" figure="SequenceFlowLabelFigure" elementIcon="false"/>
+  <labels name="AssociationLabel" figure="AssociationLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

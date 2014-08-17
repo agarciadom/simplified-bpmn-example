@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="simplebpmn_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="simplebpmn_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/SimpleBPMNDiagramFile.gif"
+         extensions="simplebpmn_diagram"
+         default="true"
+         class="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditor"
+         matchingStrategy="SimpleBPMN.diagram.part.SimpleBPMNMatchingStrategy"
+         contributorClass="SimpleBPMN.diagram.part.SimpleBPMNDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="SimpleBPMN.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/SimpleBPMNDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="SimpleBPMN.diagram.part.SimpleBPMNCreationWizard"
+  	     id="SimpleBPMN.diagram.part.SimpleBPMNCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.InitDiagram"
+            nameFilter="*.simplebpmn"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="SimpleBPMN.diagram.part.SimpleBPMNInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="SimpleBPMNPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="SimpleBPMNPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="SimpleBPMNPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="SimpleBPMNRender">
+         <Priority name="Lowest"/>
+         <ViewId id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="SimpleBPMN.diagram.providers.SimpleBPMNMarkerNavigationProvider">
+         <MarkerType name="org.eclipse.epsilon.eugenia.bpmn.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="SimpleBPMN Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="SimpleBPMN.diagram.providers.SimpleBPMNValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="SimpleBPMN.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            name="%prefpage.org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            class="SimpleBPMN.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.appearance"
+            name="%prefpage.org.eclipse.epsilon.eugenia.bpmn.diagram.appearance"
+            category="org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            class="SimpleBPMN.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.connections"
+            name="%prefpage.org.eclipse.epsilon.eugenia.bpmn.diagram.connections"
+            category="org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            class="SimpleBPMN.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.printing"
+            name="%prefpage.org.eclipse.epsilon.eugenia.bpmn.diagram.printing"
+            category="org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            class="SimpleBPMN.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.rulersAndGrid"
+            name="%prefpage.org.eclipse.epsilon.eugenia.bpmn.diagram.rulersAndGrid"
+            category="org.eclipse.epsilon.eugenia.bpmn.diagram.general"
+            class="SimpleBPMN.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="org.eclipse.epsilon.eugenia.bpmn.diagram"
+            labelProvider="SimpleBPMN.diagram.sheet.SimpleBPMNSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="org.eclipse.epsilon.eugenia.bpmn.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="org.eclipse.epsilon.eugenia.bpmn.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="SimpleBPMN.diagram.sheet.SimpleBPMNPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="SimpleBPMN.diagram.providers.SimpleBPMNViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="SimpleBPMN"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="SimpleBPMN"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="SimpleBPMN.diagram.providers.SimpleBPMNEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="SimpleBPMN"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value=""/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfBusinessProcessDiagramEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.BusinessProcessDiagramEditPart" id="BusinessProcessDiagram_1000"/>
+         <context elements="BusinessProcessDiagram_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfXOREditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.XOREditPart" id="XOR_2001"/>
+         <context elements="XOR_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfOREditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.OREditPart" id="OR_2002"/>
+         <context elements="OR_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfANDEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.ANDEditPart" id="AND_2003"/>
+         <context elements="AND_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfLaneEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.LaneEditPart" id="Lane_2004"/>
+         <context elements="Lane_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfPoolEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.PoolEditPart" id="Pool_2005"/>
+         <context elements="Pool_2005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfEventEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.EventEditPart" id="Event_2006"/>
+         <context elements="Event_2006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfActivityEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.ActivityEditPart" id="Activity_2007"/>
+         <context elements="Activity_2007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfDataObjectEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.DataObjectEditPart" id="DataObject_2008"/>
+         <context elements="DataObject_2008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfGroupEditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.GroupEditPart" id="Group_2009"/>
+         <context elements="Group_2009"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="SimpleBPMN.diagram.providers.SimpleBPMNIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="SimpleBPMN.diagram.providers.SimpleBPMNParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="SimpleBPMN.diagram.providers.SimpleBPMNShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.BusinessProcessDiagram_1000"
+               name="%metatype.name.BusinessProcessDiagram_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="BusinessProcessDiagram"
+               edithelper="SimpleBPMN.diagram.edit.helpers.BusinessProcessDiagramEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_2001"
+               name="%metatype.name.XOR_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="XOR"
+               edithelper="SimpleBPMN.diagram.edit.helpers.XOREditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.OR_2002"
+               name="%metatype.name.OR_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="OR"
+               edithelper="SimpleBPMN.diagram.edit.helpers.OREditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.AND_2003"
+               name="%metatype.name.AND_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AND"
+               edithelper="SimpleBPMN.diagram.edit.helpers.ANDEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_2004"
+               name="%metatype.name.Lane_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Lane"
+               edithelper="SimpleBPMN.diagram.edit.helpers.LaneEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_2005"
+               name="%metatype.name.Pool_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Pool"
+               edithelper="SimpleBPMN.diagram.edit.helpers.PoolEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Event_2006"
+               name="%metatype.name.Event_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Event"
+               edithelper="SimpleBPMN.diagram.edit.helpers.EventEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_2007"
+               name="%metatype.name.Activity_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Activity"
+               edithelper="SimpleBPMN.diagram.edit.helpers.ActivityEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_2008"
+               name="%metatype.name.DataObject_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DataObject"
+               edithelper="SimpleBPMN.diagram.edit.helpers.DataObjectEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_2009"
+               name="%metatype.name.Group_2009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Group"
+               edithelper="SimpleBPMN.diagram.edit.helpers.GroupEditHelper">
+            <param name="semanticHint" value="2009"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"
+               name="%metatype.name.MessageFlow_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MessageFlow"
+               edithelper="SimpleBPMN.diagram.edit.helpers.MessageFlowEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4002"
+               name="%metatype.name.SequenceFlow_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SequenceFlow"
+               edithelper="SimpleBPMN.diagram.edit.helpers.SequenceFlowEditHelper">
+            <param name="semanticHint" value="4002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <metamodelType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"
+               name="%metatype.name.Association_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Association"
+               edithelper="SimpleBPMN.diagram.edit.helpers.AssociationEditHelper">
+            <param name="semanticHint" value="4003"/>
+         </metamodelType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="org.eclipse.epsilon.eugenia.bpmn.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="org.eclipse.epsilon.eugenia.bpmn.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="org.eclipse.epsilon.eugenia.bpmn.diagram.TypeContext">
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.BusinessProcessDiagram_1000"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_2001"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.OR_2002"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.AND_2003"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_2004"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_2005"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Event_2006"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_2007"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_2008"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_2009"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4002"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.eclipse.epsilon.eugenia.bpmn.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="org.eclipse.epsilon.eugenia.bpmn.diagram"
+           properties="isURIEditorInput"
+           class="SimpleBPMN.diagram.part.SimpleBPMNUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="org.eclipse.epsilon.eugenia.bpmn.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="org.eclipse.epsilon.eugenia.bpmn.diagram"
+           properties="isShortcut"
+           class="SimpleBPMN.diagram.part.SimpleBPMNShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="org.eclipse.epsilon.eugenia.bpmn.diagram.resourceContent"/>
+			<contentExtension pattern="org.eclipse.epsilon.eugenia.bpmn.diagram.domainResourceContent"/>
+            <contentExtension pattern="org.eclipse.epsilon.eugenia.bpmn.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="org.eclipse.epsilon.eugenia.bpmn.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorContentProvider" 
+            labelProvider="SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorLabelProvider"
+            icon="icons/obj16/SimpleBPMNDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="simplebpmn_diagram"/>
+               </and>
+               <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.eclipse.epsilon.eugenia.bpmn.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.eclipse.epsilon.eugenia.bpmn.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.navigatorSorter" 
+               class="SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="simplebpmn_diagram"/>
+                  </and>
+                  <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="SimpleBPMN.diagram.navigator.SimpleBPMNDomainNavigatorContentProvider" 
+            labelProvider="SimpleBPMN.diagram.navigator.SimpleBPMNDomainNavigatorLabelProvider"
+            icon="icons/obj16/SimpleBPMNDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="simplebpmn"/>
+               </and>
+               <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.navigatorActionProvider"
+            class="SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="org.eclipse.epsilon.eugenia.bpmn.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="org.eclipse.epsilon.eugenia.bpmn.diagram.navigatorLinkHelper"
+            class="SimpleBPMN.diagram.navigator.SimpleBPMNNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="org.eclipse.epsilon.eugenia.bpmn.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="SimpleBPMN.diagram.navigator.SimpleBPMNAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="SimpleBPMN.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="SimpleBPMN.diagram.updateDiagram"
+         contextId="SimpleBPMN.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="org.eclipse.epsilon.eugenia.bpmn.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="SimpleBPMN.diagram.edit.parts.BusinessProcessDiagramEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="org.eclipse.epsilon.eugenia.bpmn.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorID"
+         defaultHandler="SimpleBPMN.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

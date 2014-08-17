@@ -716,7 +716,7 @@ public interface SimpleBPMNPackage extends EPackage {
 	int GROUP__NAME = ARTIFACT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' reference list.
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1000,10 +1000,10 @@ public interface SimpleBPMNPackage extends EPackage {
 	EClass getGroup();
 
 	/**
-	 * Returns the meta object for the reference list '{@link SimpleBPMN.Group#getElements <em>Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link SimpleBPMN.Group#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Elements</em>'.
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
 	 * @see SimpleBPMN.Group#getElements()
 	 * @see #getGroup()
 	 * @generated
@@ -1283,7 +1283,7 @@ public interface SimpleBPMNPackage extends EPackage {
 		EClass GROUP = eINSTANCE.getGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

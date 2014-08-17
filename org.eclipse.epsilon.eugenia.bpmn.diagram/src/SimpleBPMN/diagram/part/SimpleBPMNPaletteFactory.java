@@ -3,12 +3,14 @@
  */
 package SimpleBPMN.diagram.part;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 import org.eclipse.gef.palette.PaletteContainer;
 import org.eclipse.gef.palette.PaletteDrawer;
 import org.eclipse.gef.palette.PaletteRoot;
 import org.eclipse.gef.palette.ToolEntry;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry;
 import org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry;
 
@@ -65,11 +67,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createANDGateway1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_3003);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.ANDGateway1CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.ANDGateway1CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003));
+				types);
 		entry.setId("createANDGateway1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_2003));
@@ -81,11 +85,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createActivity2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_3009);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.Activity2CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.Activity2CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007));
+				types);
 		entry.setId("createActivity2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_2007));
@@ -97,11 +103,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createDataObject3CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_2008);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_3010);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.DataObject3CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.DataObject3CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_2008));
+				types);
 		entry.setId("createDataObject3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_2008));
@@ -113,11 +121,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createEndEvent4CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_3008);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.EndEvent4CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.EndEvent4CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012));
+				types);
 		entry.setId("createEndEvent4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012));
@@ -129,11 +139,12 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createGroup5CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_2009);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_3011);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.Group5CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Group5CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_2009));
+				SimpleBPMN.diagram.part.Messages.Group5CreationTool_desc, types);
 		entry.setId("createGroup5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_2009));
@@ -145,11 +156,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createIntermediateEvent6CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_3007);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.IntermediateEvent6CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.IntermediateEvent6CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011));
+				types);
 		entry.setId("createIntermediateEvent6CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_2011));
@@ -161,11 +174,12 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createLane7CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_2004);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_3004);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.Lane7CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Lane7CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_2004));
+				SimpleBPMN.diagram.part.Messages.Lane7CreationTool_desc, types);
 		entry.setId("createLane7CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_2004));
@@ -177,11 +191,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createORGateway8CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_3002);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.ORGateway8CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.ORGateway8CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002));
+				types);
 		entry.setId("createORGateway8CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_2002));
@@ -193,11 +209,12 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createPool9CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_2005);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_3005);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.Pool9CreationTool_title,
-				SimpleBPMN.diagram.part.Messages.Pool9CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_2005));
+				SimpleBPMN.diagram.part.Messages.Pool9CreationTool_desc, types);
 		entry.setId("createPool9CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_2005));
@@ -209,11 +226,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createStartEvent10CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_3006);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.StartEvent10CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.StartEvent10CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010));
+				types);
 		entry.setId("createStartEvent10CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_2010));
@@ -225,11 +244,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createXORGateway11CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_3001);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				SimpleBPMN.diagram.part.Messages.XORGateway11CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.XORGateway11CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001));
+				types);
 		entry.setId("createXORGateway11CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_2001));
@@ -241,11 +262,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createAssociation1CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4006);
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
 				SimpleBPMN.diagram.part.Messages.Association1CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.Association1CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003));
+				types);
 		entry.setId("createAssociation1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003));
@@ -257,11 +280,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createMessageFlow2CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4004);
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
 				SimpleBPMN.diagram.part.Messages.MessageFlow2CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.MessageFlow2CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001));
+				types);
 		entry.setId("createMessageFlow2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001));
@@ -273,11 +298,13 @@ public class SimpleBPMNPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createSequenceFlow3CreationTool() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002);
+		types.add(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4005);
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
 				SimpleBPMN.diagram.part.Messages.SequenceFlow3CreationTool_title,
 				SimpleBPMN.diagram.part.Messages.SequenceFlow3CreationTool_desc,
-				Collections
-						.singletonList(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002));
+				types);
 		entry.setId("createSequenceFlow3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes
 				.getImageDescriptor(SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002));

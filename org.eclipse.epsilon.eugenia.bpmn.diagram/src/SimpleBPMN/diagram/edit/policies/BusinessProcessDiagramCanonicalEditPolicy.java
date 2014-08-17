@@ -370,10 +370,106 @@ public class BusinessProcessDiagramCanonicalEditPolicy extends
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getXOR_3001ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getOR_3002ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getAND_3003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getLane_3004ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getPool_3005ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getStartEvent_3006ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getIntermediateEvent_3007ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getEndEvent_3008ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getActivity_3009ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getDataObject_3010ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getGroup_3011ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
 						.getMessageFlow_4001ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getMessageFlow_4004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -386,10 +482,26 @@ public class BusinessProcessDiagramCanonicalEditPolicy extends
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getSequenceFlow_4005ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
 						.getAssociation_4003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(SimpleBPMN.diagram.part.SimpleBPMNDiagramUpdater
+						.getAssociation_4006ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

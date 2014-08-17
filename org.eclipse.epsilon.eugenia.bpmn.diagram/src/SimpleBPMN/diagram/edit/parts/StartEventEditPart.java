@@ -268,9 +268,9 @@ public class StartEventEditPart extends AbstractBorderedShapeEditPart {
 		 */
 		public StartEventFigure() {
 			this.setURI("platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg");
-			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
-					getMapMode().DPtoLP(5)));
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(2),
+					getMapMode().DPtoLP(2), getMapMode().DPtoLP(2),
+					getMapMode().DPtoLP(2)));
 		}
 
 	}

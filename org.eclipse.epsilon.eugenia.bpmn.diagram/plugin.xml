@@ -258,8 +258,8 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="SimpleBPMN"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2010,2011,2012,2007,2008,2009"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2010,2011,2012,2007,2008,2009,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4004,4002,4005,4003,4006"/>
       </viewProvider>
    </extension>
 
@@ -271,16 +271,16 @@
             <method name="getType()" value="SimpleBPMN"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,2004,2005,2010,2011,2012,2007,2008,2009"/>
+            <method name="getType()" value="2001,2002,2003,2004,2005,2010,2011,2012,2007,2008,2009,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003"/>
+            <method name="getType()" value="4001,4004,4002,4005,4003,4006"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003,5004,5005,5011,5012,5013,5007,5008,5009"/>
+            <method name="getType()" value="5001,5002,5003,5004,5005,5011,5012,5013,5007,5008,5009,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
-            <method name="getType()" value=""/>
+            <method name="getType()" value="7001,7002"/>
          </object>
          <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
       </editpartProvider>
@@ -348,6 +348,61 @@
          <Priority name="Lowest"/>
          <object class="SimpleBPMN.diagram.edit.parts.GroupEditPart" id="Group_2009"/>
          <context elements="Group_2009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfXOR2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.XOR2EditPart" id="XOR_3001"/>
+         <context elements="XOR_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfOR2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.OR2EditPart" id="OR_3002"/>
+         <context elements="OR_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfAND2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.AND2EditPart" id="AND_3003"/>
+         <context elements="AND_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfLane2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.Lane2EditPart" id="Lane_3004"/>
+         <context elements="Lane_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfPool2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.Pool2EditPart" id="Pool_3005"/>
+         <context elements="Pool_3005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfStartEvent2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.StartEvent2EditPart" id="StartEvent_3006"/>
+         <context elements="StartEvent_3006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfIntermediateEvent2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart" id="IntermediateEvent_3007"/>
+         <context elements="IntermediateEvent_3007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfEndEvent2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.EndEvent2EditPart" id="EndEvent_3008"/>
+         <context elements="EndEvent_3008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfActivity2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.Activity2EditPart" id="Activity_3009"/>
+         <context elements="Activity_3009"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfDataObject2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.DataObject2EditPart" id="DataObject_3010"/>
+         <context elements="DataObject_3010"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="SimpleBPMN.diagram.providers.assistants.SimpleBPMNModelingAssistantProviderOfGroup2EditPart">
+         <Priority name="Lowest"/>
+         <object class="SimpleBPMN.diagram.edit.parts.Group2EditPart" id="Group_3011"/>
+         <context elements="Group_3011"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -501,6 +556,105 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_3001"
+               name="%metatype.name.XOR_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_2001"/>
+            <param name="semanticHint" value="3001"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.OR_3002"
+               name="%metatype.name.OR_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.OR_2002"/>
+            <param name="semanticHint" value="3002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.AND_3003"
+               name="%metatype.name.AND_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.AND_2003"/>
+            <param name="semanticHint" value="3003"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_3004"
+               name="%metatype.name.Lane_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_2004"/>
+            <param name="semanticHint" value="3004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_3005"
+               name="%metatype.name.Pool_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_2005"/>
+            <param name="semanticHint" value="3005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.StartEvent_3006"
+               name="%metatype.name.StartEvent_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.StartEvent_2010"/>
+            <param name="semanticHint" value="3006"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.IntermediateEvent_3007"
+               name="%metatype.name.IntermediateEvent_3007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.IntermediateEvent_2011"/>
+            <param name="semanticHint" value="3007"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.EndEvent_3008"
+               name="%metatype.name.EndEvent_3008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.EndEvent_2012"/>
+            <param name="semanticHint" value="3008"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_3009"
+               name="%metatype.name.Activity_3009"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_2007"/>
+            <param name="semanticHint" value="3009"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_3010"
+               name="%metatype.name.DataObject_3010"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_2008"/>
+            <param name="semanticHint" value="3010"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_3011"
+               name="%metatype.name.Group_3011"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_2009"/>
+            <param name="semanticHint" value="3011"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
          <metamodelType
                id="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"
                name="%metatype.name.MessageFlow_4001"
@@ -509,6 +663,15 @@
                edithelper="SimpleBPMN.diagram.edit.helpers.MessageFlowEditHelper">
             <param name="semanticHint" value="4001"/>
          </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4004"
+               name="%metatype.name.MessageFlow_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
       </metamodel>
       <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
          <metamodelType
@@ -521,6 +684,15 @@
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4005"
+               name="%metatype.name.SequenceFlow_4005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4002"/>
+            <param name="semanticHint" value="4005"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
          <metamodelType
                id="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"
                name="%metatype.name.Association_4003"
@@ -529,6 +701,15 @@
                edithelper="SimpleBPMN.diagram.edit.helpers.AssociationEditHelper">
             <param name="semanticHint" value="4003"/>
          </metamodelType>
+      </metamodel>
+      <metamodel nsURI="http://eclipse.org/eugenia/simplebpmn">
+         <specializationType
+               id="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4006"
+               name="%metatype.name.Association_4006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"/>
+            <param name="semanticHint" value="4006"/>
+         </specializationType>
       </metamodel>
    </extension>
 
@@ -554,9 +735,23 @@
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_2007"/>
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_2008"/>
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_2009"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_3001"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.OR_3002"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.AND_3003"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_3004"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_3005"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.StartEvent_3006"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.IntermediateEvent_3007"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.EndEvent_3008"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_3009"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_3010"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Group_3011"/>
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4004"/>
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4002"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4005"/>
          <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"/>
+         <elementType ref="org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4006"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>

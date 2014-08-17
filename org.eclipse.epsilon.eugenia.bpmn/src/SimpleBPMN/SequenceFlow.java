@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getSequenceFlow()
- * @model annotation="gmf.link tool.name='Sequence Flow'"
+ * @model annotation="gmf.link tool.name='Sequence Flow' target.decoration='filledclosedarrow'"
  * @generated
  */
 public interface SequenceFlow extends ConnectingObject {

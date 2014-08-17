@@ -57,7 +57,7 @@ public class AssociationNameEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 6003;
+	public static final int VISUAL_ID = 6006;
 
 	/**
 	 * @generated
@@ -321,7 +321,7 @@ public class AssociationNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 					.getParser(
-							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003,
+							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4006,
 							getParserElement(),
 							SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 									.getType(SimpleBPMN.diagram.edit.parts.AssociationNameEditPart.VISUAL_ID));

@@ -25,6 +25,7 @@
       <details key="label" value="name"/>
       <details key="source" value="from"/>
       <details key="target" value="to"/>
+      <details key="color" value="0,0,0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//FlowObject"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="to" eType="#//FlowObject"/>
@@ -32,14 +33,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//ConnectingObject">
     <eAnnotations source="gmf.link">
       <details key="tool.name" value="Message Flow"/>
+      <details key="style" value="dash"/>
+      <details key="target.decoration" value="closedarrow"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//ConnectingObject">
     <eAnnotations source="gmf.link">
       <details key="tool.name" value="Sequence Flow"/>
+      <details key="target.decoration" value="filledclosedarrow"/>
     </eAnnotations>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//ConnectingObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//ConnectingObject">
+    <eAnnotations source="gmf.link">
+      <details key="style" value="dot"/>
+      <details key="target.decoration" value="arrow"/>
+    </eAnnotations>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FlowObject" abstract="true" eSuperTypes="#//BPMNElement">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
@@ -49,16 +58,34 @@
   <eClassifiers xsi:type="ecore:EClass" name="XOR" eSuperTypes="#//Gateway">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="XOR Gateway"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/xor-gateway.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OR" eSuperTypes="#//Gateway">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="OR Gateway"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/or-gateway.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AND" eSuperTypes="#//Gateway">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="AND Gateway"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/and-gateway.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StartEvent" eSuperTypes="#//FlowObject">
@@ -69,16 +96,29 @@
       <details key="label.icon" value="false"/>
       <details key="label.placement" value="external"/>
       <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntermediateEvent" eSuperTypes="#//FlowObject">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="Intermediate Event"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/intermediate-event.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EndEvent" eSuperTypes="#//FlowObject">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="End Event"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/end-event.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" eSuperTypes="#//FlowObject"/>
@@ -90,10 +130,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataObject" eSuperTypes="#//Artifact">
     <eAnnotations source="gmf.node">
       <details key="tool.name" value="Data Object"/>
+      <details key="figure" value="svg"/>
+      <details key="svg.uri" value="platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/data-object.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+      <details key="resizable" value="false"/>
+      <details key="margin" value="2"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//Artifact">
+    <eAnnotations source="gmf.node">
+      <details key="label.placement" value="external"/>
+      <details key="label.icon" value="false"/>
+      <details key="border.style" value="dash"/>
+      <details key="margin" value="2"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//BPMNElement"/>
+        eType="#//BPMNElement" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

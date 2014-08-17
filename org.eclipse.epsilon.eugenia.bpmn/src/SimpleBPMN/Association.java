@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getAssociation()
- * @model
+ * @model annotation="gmf.link style='dot' target.decoration='arrow'"
  * @generated
  */
 public interface Association extends ConnectingObject {

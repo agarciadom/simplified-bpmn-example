@@ -57,7 +57,7 @@ public class MessageFlowNameEditPart extends LabelEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 6001;
+	public static final int VISUAL_ID = 6004;
 
 	/**
 	 * @generated
@@ -321,7 +321,7 @@ public class MessageFlowNameEditPart extends LabelEditPart implements
 		if (parser == null) {
 			parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 					.getParser(
-							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001,
+							SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4004,
 							getParserElement(),
 							SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 									.getType(SimpleBPMN.diagram.edit.parts.MessageFlowNameEditPart.VISUAL_ID));

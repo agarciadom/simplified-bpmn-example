@@ -13,12 +13,12 @@ public class SimpleBPMNNavigatorSorter extends ViewerSorter {
 	/**
 	 * @generated
 	 */
-	private static final int GROUP_CATEGORY = 4005;
+	private static final int GROUP_CATEGORY = 7004;
 
 	/**
 	 * @generated
 	 */
-	private static final int SHORTCUTS_CATEGORY = 4004;
+	private static final int SHORTCUTS_CATEGORY = 7003;
 
 	/**
 	 * @generated

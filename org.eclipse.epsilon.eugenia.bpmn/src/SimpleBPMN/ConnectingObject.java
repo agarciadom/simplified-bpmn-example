@@ -18,7 +18,7 @@ package SimpleBPMN;
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getConnectingObject()
  * @model abstract="true"
- *        annotation="gmf.link label='name' source='from' target='to'"
+ *        annotation="gmf.link label='name' source='from' target='to' color='0,0,0'"
  * @generated
  */
 public interface ConnectingObject extends BPMNElement {

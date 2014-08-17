@@ -35,7 +35,7 @@
     <genClasses image="false" ecoreClass="simplebpmn.ecore#//Artifact"/>
     <genClasses ecoreClass="simplebpmn.ecore#//DataObject"/>
     <genClasses ecoreClass="simplebpmn.ecore#//Group">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplebpmn.ecore#//Group/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplebpmn.ecore#//Group/elements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

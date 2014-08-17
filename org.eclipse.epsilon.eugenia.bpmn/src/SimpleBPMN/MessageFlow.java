@@ -10,7 +10,7 @@ package SimpleBPMN;
  *
  *
  * @see SimpleBPMN.SimpleBPMNPackage#getMessageFlow()
- * @model annotation="gmf.link tool.name='Message Flow'"
+ * @model annotation="gmf.link tool.name='Message Flow' style='dash' target.decoration='closedarrow'"
  * @generated
  */
 public interface MessageFlow extends ConnectingObject {

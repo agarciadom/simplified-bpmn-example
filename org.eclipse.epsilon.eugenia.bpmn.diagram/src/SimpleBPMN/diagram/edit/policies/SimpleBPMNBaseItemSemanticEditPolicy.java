@@ -331,10 +331,26 @@ public class SimpleBPMNBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canCreateMessageFlow_4004(SimpleBPMN.Group container,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return canExistMessageFlow_4004(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canCreateSequenceFlow_4002(
 				SimpleBPMN.BusinessProcessDiagram container,
 				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
 			return canExistSequenceFlow_4002(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateSequenceFlow_4005(SimpleBPMN.Group container,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return canExistSequenceFlow_4005(container, null, source, target);
 		}
 
 		/**
@@ -349,8 +365,25 @@ public class SimpleBPMNBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canCreateAssociation_4006(SimpleBPMN.Group container,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return canExistAssociation_4006(container, null, source, target);
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canExistMessageFlow_4001(
 				SimpleBPMN.BusinessProcessDiagram container,
+				SimpleBPMN.MessageFlow linkInstance,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistMessageFlow_4004(SimpleBPMN.Group container,
 				SimpleBPMN.MessageFlow linkInstance,
 				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
 			return true;
@@ -369,8 +402,26 @@ public class SimpleBPMNBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
+		public boolean canExistSequenceFlow_4005(SimpleBPMN.Group container,
+				SimpleBPMN.SequenceFlow linkInstance,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
 		public boolean canExistAssociation_4003(
 				SimpleBPMN.BusinessProcessDiagram container,
+				SimpleBPMN.Association linkInstance,
+				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
+			return true;
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canExistAssociation_4006(SimpleBPMN.Group container,
 				SimpleBPMN.Association linkInstance,
 				SimpleBPMN.FlowObject source, SimpleBPMN.FlowObject target) {
 			return true;

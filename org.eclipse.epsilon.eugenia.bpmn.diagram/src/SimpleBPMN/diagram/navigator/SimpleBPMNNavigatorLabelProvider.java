@@ -125,6 +125,39 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?TopLevelNode?http://eclipse.org/eugenia/simplebpmn?EndEvent", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_2012); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?XOR", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_3001); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?OR", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_3002); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?AND", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_3003); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?Lane", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_3004); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?Pool", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_3005); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?StartEvent", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_3006); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?IntermediateEvent", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_3007); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?EndEvent", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_3008); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?Activity", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_3009); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?DataObject", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_3010); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Node?http://eclipse.org/eugenia/simplebpmn?Group", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_3011); //$NON-NLS-1$
 		case SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://eclipse.org/eugenia/simplebpmn?MessageFlow", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001); //$NON-NLS-1$
@@ -134,6 +167,15 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 		case SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID:
 			return getImage(
 					"Navigator?Link?http://eclipse.org/eugenia/simplebpmn?Association", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://eclipse.org/eugenia/simplebpmn?MessageFlow", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4004); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://eclipse.org/eugenia/simplebpmn?SequenceFlow", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4005); //$NON-NLS-1$
+		case SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID:
+			return getImage(
+					"Navigator?Link?http://eclipse.org/eugenia/simplebpmn?Association", SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4006); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -222,12 +264,40 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 			return getIntermediateEvent_2011Text(view);
 		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
 			return getEndEvent_2012Text(view);
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID:
+			return getXOR_3001Text(view);
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID:
+			return getOR_3002Text(view);
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID:
+			return getAND_3003Text(view);
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID:
+			return getLane_3004Text(view);
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID:
+			return getPool_3005Text(view);
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID:
+			return getStartEvent_3006Text(view);
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID:
+			return getIntermediateEvent_3007Text(view);
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID:
+			return getEndEvent_3008Text(view);
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID:
+			return getActivity_3009Text(view);
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID:
+			return getDataObject_3010Text(view);
+		case SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID:
+			return getGroup_3011Text(view);
 		case SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID:
 			return getMessageFlow_4001Text(view);
 		case SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID:
 			return getSequenceFlow_4002Text(view);
 		case SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID:
 			return getAssociation_4003Text(view);
+		case SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID:
+			return getMessageFlow_4004Text(view);
+		case SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID:
+			return getSequenceFlow_4005Text(view);
+		case SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID:
+			return getAssociation_4006Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -473,10 +543,292 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getMessageFlow_4001Text(View view) {
+	private String getXOR_3001Text(View view) {
 		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 				.getParser(
-						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4001,
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.XOR_3001,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.XORName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5014); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getOR_3002Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.OR_3002,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.ORName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5015); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getAND_3003Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.AND_3003,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.ANDName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5016); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getLane_3004Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Lane_3004,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.LaneName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5017); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getPool_3005Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Pool_3005,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.PoolName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5018); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getStartEvent_3006Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.StartEvent_3006,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.StartEventName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5019); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getIntermediateEvent_3007Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.IntermediateEvent_3007,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.IntermediateEventName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5020); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getEndEvent_3008Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.EndEvent_3008,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.EndEventName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5021); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getActivity_3009Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Activity_3009,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.ActivityName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5022); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getDataObject_3010Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.DataObject_3010,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.DataObjectName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5023); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getGroup_3011Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Group_3011,
+						view.getElement() != null ? view.getElement() : view,
+						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
+								.getType(SimpleBPMN.diagram.edit.parts.GroupName2EditPart.VISUAL_ID));
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(
+					view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 5024); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getMessageFlow_4001Text(View view) {
+		SimpleBPMN.MessageFlow domainModelElement = (SimpleBPMN.MessageFlow) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin
+					.getInstance()
+					.logError(
+							"No domain element for view with visualID = " + 4001); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getSequenceFlow_4002Text(View view) {
+		SimpleBPMN.SequenceFlow domainModelElement = (SimpleBPMN.SequenceFlow) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin
+					.getInstance()
+					.logError(
+							"No domain element for view with visualID = " + 4002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getAssociation_4003Text(View view) {
+		SimpleBPMN.Association domainModelElement = (SimpleBPMN.Association) view
+				.getElement();
+		if (domainModelElement != null) {
+			return domainModelElement.getName();
+		} else {
+			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin
+					.getInstance()
+					.logError(
+							"No domain element for view with visualID = " + 4003); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	 * @generated
+	 */
+	private String getMessageFlow_4004Text(View view) {
+		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
+				.getParser(
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.MessageFlow_4004,
 						view.getElement() != null ? view.getElement() : view,
 						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 								.getType(SimpleBPMN.diagram.edit.parts.MessageFlowNameEditPart.VISUAL_ID));
@@ -486,7 +838,7 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
-					.logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6004); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -494,10 +846,10 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getSequenceFlow_4002Text(View view) {
+	private String getSequenceFlow_4005Text(View view) {
 		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 				.getParser(
-						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4002,
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.SequenceFlow_4005,
 						view.getElement() != null ? view.getElement() : view,
 						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 								.getType(SimpleBPMN.diagram.edit.parts.SequenceFlowNameEditPart.VISUAL_ID));
@@ -507,7 +859,7 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
-					.logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6005); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
@@ -515,10 +867,10 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 	/**
 	 * @generated
 	 */
-	private String getAssociation_4003Text(View view) {
+	private String getAssociation_4006Text(View view) {
 		IParser parser = SimpleBPMN.diagram.providers.SimpleBPMNParserProvider
 				.getParser(
-						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4003,
+						SimpleBPMN.diagram.providers.SimpleBPMNElementTypes.Association_4006,
 						view.getElement() != null ? view.getElement() : view,
 						SimpleBPMN.diagram.part.SimpleBPMNVisualIDRegistry
 								.getType(SimpleBPMN.diagram.edit.parts.AssociationNameEditPart.VISUAL_ID));
@@ -528,7 +880,7 @@ public class SimpleBPMNNavigatorLabelProvider extends LabelProvider implements
 					ParserOptions.NONE.intValue());
 		} else {
 			SimpleBPMN.diagram.part.SimpleBPMNDiagramEditorPlugin.getInstance()
-					.logError("Parser was not found for label " + 6003); //$NON-NLS-1$
+					.logError("Parser was not found for label " + 6006); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

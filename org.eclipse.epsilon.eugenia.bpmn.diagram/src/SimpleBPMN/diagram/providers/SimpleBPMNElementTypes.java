@@ -96,7 +96,67 @@ public class SimpleBPMNElementTypes {
 	/**
 	 * @generated
 	 */
+	public static final IElementType XOR_3001 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.XOR_3001"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType OR_3002 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.OR_3002"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType AND_3003 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.AND_3003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Lane_3004 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Lane_3004"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Pool_3005 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Pool_3005"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType StartEvent_3006 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.StartEvent_3006"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType IntermediateEvent_3007 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.IntermediateEvent_3007"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType EndEvent_3008 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.EndEvent_3008"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Activity_3009 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Activity_3009"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType DataObject_3010 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.DataObject_3010"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Group_3011 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Group_3011"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType MessageFlow_4001 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4001"); //$NON-NLS-1$
+	/**
+	 * @generated
+	 */
+	public static final IElementType MessageFlow_4004 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.MessageFlow_4004"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
@@ -104,7 +164,17 @@ public class SimpleBPMNElementTypes {
 	/**
 	 * @generated
 	 */
+	public static final IElementType SequenceFlow_4005 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.SequenceFlow_4005"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
 	public static final IElementType Association_4003 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4003"); //$NON-NLS-1$
+
+	/**
+	 * @generated
+	 */
+	public static final IElementType Association_4006 = getElementType("org.eclipse.epsilon.eugenia.bpmn.diagram.Association_4006"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -182,13 +252,56 @@ public class SimpleBPMNElementTypes {
 			elements.put(Group_2009,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getGroup());
 
+			elements.put(XOR_3001,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getXOR());
+
+			elements.put(OR_3002,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getOR());
+
+			elements.put(AND_3003,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAND());
+
+			elements.put(Lane_3004,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getLane());
+
+			elements.put(Pool_3005,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getPool());
+
+			elements.put(StartEvent_3006,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getStartEvent());
+
+			elements.put(IntermediateEvent_3007,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE
+							.getIntermediateEvent());
+
+			elements.put(EndEvent_3008,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEndEvent());
+
+			elements.put(Activity_3009,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getActivity());
+
+			elements.put(DataObject_3010,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getDataObject());
+
+			elements.put(Group_3011,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getGroup());
+
 			elements.put(MessageFlow_4001,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getMessageFlow());
+
+			elements.put(MessageFlow_4004,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getMessageFlow());
 
 			elements.put(SequenceFlow_4002,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getSequenceFlow());
 
+			elements.put(SequenceFlow_4005,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getSequenceFlow());
+
 			elements.put(Association_4003,
+					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAssociation());
+
+			elements.put(Association_4006,
 					SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAssociation());
 		}
 		return (ENamedElement) elements.get(type);
@@ -219,9 +332,23 @@ public class SimpleBPMNElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Activity_2007);
 			KNOWN_ELEMENT_TYPES.add(DataObject_2008);
 			KNOWN_ELEMENT_TYPES.add(Group_2009);
+			KNOWN_ELEMENT_TYPES.add(XOR_3001);
+			KNOWN_ELEMENT_TYPES.add(OR_3002);
+			KNOWN_ELEMENT_TYPES.add(AND_3003);
+			KNOWN_ELEMENT_TYPES.add(Lane_3004);
+			KNOWN_ELEMENT_TYPES.add(Pool_3005);
+			KNOWN_ELEMENT_TYPES.add(StartEvent_3006);
+			KNOWN_ELEMENT_TYPES.add(IntermediateEvent_3007);
+			KNOWN_ELEMENT_TYPES.add(EndEvent_3008);
+			KNOWN_ELEMENT_TYPES.add(Activity_3009);
+			KNOWN_ELEMENT_TYPES.add(DataObject_3010);
+			KNOWN_ELEMENT_TYPES.add(Group_3011);
 			KNOWN_ELEMENT_TYPES.add(MessageFlow_4001);
+			KNOWN_ELEMENT_TYPES.add(MessageFlow_4004);
 			KNOWN_ELEMENT_TYPES.add(SequenceFlow_4002);
+			KNOWN_ELEMENT_TYPES.add(SequenceFlow_4005);
 			KNOWN_ELEMENT_TYPES.add(Association_4003);
+			KNOWN_ELEMENT_TYPES.add(Association_4006);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -255,12 +382,40 @@ public class SimpleBPMNElementTypes {
 			return DataObject_2008;
 		case SimpleBPMN.diagram.edit.parts.GroupEditPart.VISUAL_ID:
 			return Group_2009;
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID:
+			return XOR_3001;
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID:
+			return OR_3002;
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID:
+			return AND_3003;
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID:
+			return Lane_3004;
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID:
+			return Pool_3005;
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID:
+			return StartEvent_3006;
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID:
+			return IntermediateEvent_3007;
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID:
+			return EndEvent_3008;
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID:
+			return Activity_3009;
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID:
+			return DataObject_3010;
+		case SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID:
+			return Group_3011;
 		case SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID:
 			return MessageFlow_4001;
+		case SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID:
+			return MessageFlow_4004;
 		case SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID:
 			return SequenceFlow_4002;
+		case SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID:
+			return SequenceFlow_4005;
 		case SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID:
 			return Association_4003;
+		case SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID:
+			return Association_4006;
 		}
 		return null;
 	}

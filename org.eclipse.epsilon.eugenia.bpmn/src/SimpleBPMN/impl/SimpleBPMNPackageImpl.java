@@ -660,7 +660,7 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		initEClass(dataObjectEClass, DataObject.class, "DataObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(groupEClass, Group.class, "Group", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroup_Elements(), this.getBPMNElement(), null, "elements", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGroup_Elements(), this.getBPMNElement(), null, "elements", null, 0, -1, Group.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -674,6 +674,8 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		createGmf_2Annotations();
 		// gmf.link
 		createGmf_3Annotations();
+		// gmf.compartment
+		createGmf_4Annotations();
 	}
 
 	/**
@@ -730,19 +732,37 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		  (xorEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "XOR Gateway"
+			 "tool.name", "XOR Gateway",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/xor-gateway.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (orEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "OR Gateway"
+			 "tool.name", "OR Gateway",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/or-gateway.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (andEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "AND Gateway"
+			 "tool.name", "AND Gateway",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/and-gateway.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (startEventEClass, 
@@ -753,19 +773,32 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/start-event.svg",
 			 "label.icon", "false",
 			 "label.placement", "external",
-			 "resizable", "false"
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (intermediateEventEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "Intermediate Event"
+			 "tool.name", "Intermediate Event",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/intermediate-event.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (endEventEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "End Event"
+			 "tool.name", "End Event",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/end-event.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
 		   });	
 		addAnnotation
 		  (artifactEClass, 
@@ -777,7 +810,22 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		  (dataObjectEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "Data Object"
+			 "tool.name", "Data Object",
+			 "figure", "svg",
+			 "svg.uri", "platform:/plugin/org.eclipse.epsilon.eugenia.bpmn/svg/data-object.svg",
+			 "label.icon", "false",
+			 "label.placement", "external",
+			 "resizable", "false",
+			 "margin", "2"
+		   });	
+		addAnnotation
+		  (groupEClass, 
+		   source, 
+		   new String[] {
+			 "label.placement", "external",
+			 "label.icon", "false",
+			 "border.style", "dash",
+			 "margin", "2"
 		   });
 	}
 
@@ -795,19 +843,45 @@ public class SimpleBPMNPackageImpl extends EPackageImpl implements SimpleBPMNPac
 		   new String[] {
 			 "label", "name",
 			 "source", "from",
-			 "target", "to"
+			 "target", "to",
+			 "color", "0,0,0"
 		   });	
 		addAnnotation
 		  (messageFlowEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "Message Flow"
+			 "tool.name", "Message Flow",
+			 "style", "dash",
+			 "target.decoration", "closedarrow"
 		   });	
 		addAnnotation
 		  (sequenceFlowEClass, 
 		   source, 
 		   new String[] {
-			 "tool.name", "Sequence Flow"
+			 "tool.name", "Sequence Flow",
+			 "target.decoration", "filledclosedarrow"
+		   });	
+		addAnnotation
+		  (associationEClass, 
+		   source, 
+		   new String[] {
+			 "style", "dot",
+			 "target.decoration", "arrow"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.compartment";	
+		addAnnotation
+		  (getGroup_Elements(), 
+		   source, 
+		   new String[] {
 		   });
 	}
 

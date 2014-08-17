@@ -396,6 +396,16 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String GroupGroupElementsCompartmentEditPart_title;
+
+	/**
+	 * @generated
+	 */
+	public static String GroupGroupElementsCompartment2EditPart_title;
+
+	/**
+	 * @generated
+	 */
 	public static String CommandName_OpenDiagram;
 
 	/**
@@ -476,6 +486,76 @@ public class Messages extends NLS {
 	/**
 	 * @generated
 	 */
+	public static String NavigatorGroupName_XOR_3001_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_XOR_3001_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OR_3002_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_OR_3002_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_AND_3003_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_AND_3003_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_StartEvent_3006_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_StartEvent_3006_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_IntermediateEvent_3007_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_IntermediateEvent_3007_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_EndEvent_3008_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_EndEvent_3008_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Activity_3009_incominglinks;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Activity_3009_outgoinglinks;
+
+	/**
+	 * @generated
+	 */
 	public static String NavigatorGroupName_MessageFlow_4001_target;
 
 	/**
@@ -502,6 +582,36 @@ public class Messages extends NLS {
 	 * @generated
 	 */
 	public static String NavigatorGroupName_Association_4003_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MessageFlow_4004_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_MessageFlow_4004_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SequenceFlow_4005_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_SequenceFlow_4005_source;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Association_4006_target;
+
+	/**
+	 * @generated
+	 */
+	public static String NavigatorGroupName_Association_4006_source;
 
 	/**
 	 * @generated

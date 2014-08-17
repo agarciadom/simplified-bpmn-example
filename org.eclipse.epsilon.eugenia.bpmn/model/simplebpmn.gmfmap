@@ -209,7 +209,8 @@
   <nodes>
     <containmentFeature
         href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
-    <ownedChild>
+    <ownedChild
+        relatedDiagrams="//@diagram">
       <domainMetaElement
           href="simplebpmn.ecore#//Group"/>
       <labelMappings
@@ -224,8 +225,96 @@
           href="simplebpmn.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="simplebpmn.gmfgraph#Group"/>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.0/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.1/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.2/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.3/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.4/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.5/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.6/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.7/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.8/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.9/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <children
+          compartment="//@nodes.10/@ownedChild/@compartments.0"
+          referencedChild="//@nodes.10/@ownedChild">
+        <containmentFeature
+            href="simplebpmn.ecore#//Group/elements"/>
+      </children>
+      <compartments
+          children="//@nodes.10/@ownedChild/@children.0 //@nodes.10/@ownedChild/@children.1 //@nodes.10/@ownedChild/@children.2 //@nodes.10/@ownedChild/@children.3 //@nodes.10/@ownedChild/@children.4 //@nodes.10/@ownedChild/@children.5 //@nodes.10/@ownedChild/@children.6 //@nodes.10/@ownedChild/@children.7 //@nodes.10/@ownedChild/@children.8 //@nodes.10/@ownedChild/@children.9 //@nodes.10/@ownedChild/@children.10">
+        <compartment
+            href="simplebpmn.gmfgraph#GroupElementsCompartment"/>
+      </compartments>
     </ownedChild>
   </nodes>
+  <links>
+    <domainMetaElement
+        href="simplebpmn.ecore#//MessageFlow"/>
+    <containmentFeature
+        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="simplebpmn.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="simplebpmn.gmfgraph#MessageFlow"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/from"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/to"/>
+  </links>
   <links>
     <domainMetaElement
         href="simplebpmn.ecore#//MessageFlow"/>
@@ -237,12 +326,29 @@
           href="simplebpmn.ecore#//BPMNElement/name"/>
     </labelMappings>
     <containmentFeature
-        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+        href="simplebpmn.ecore#//Group/elements"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="simplebpmn.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
         href="simplebpmn.gmfgraph#MessageFlow"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/from"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/to"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="simplebpmn.ecore#//SequenceFlow"/>
+    <containmentFeature
+        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="simplebpmn.gmftool#//@palette/@tools.1/@tools.2"/>
+    <diagramLink
+        href="simplebpmn.gmfgraph#SequenceFlow"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="simplebpmn.ecore#//ConnectingObject/from"/>
@@ -261,12 +367,29 @@
           href="simplebpmn.ecore#//BPMNElement/name"/>
     </labelMappings>
     <containmentFeature
-        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+        href="simplebpmn.ecore#//Group/elements"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="simplebpmn.gmftool#//@palette/@tools.1/@tools.2"/>
     <diagramLink
         href="simplebpmn.gmfgraph#SequenceFlow"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/from"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="simplebpmn.ecore#//ConnectingObject/to"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="simplebpmn.ecore#//Association"/>
+    <containmentFeature
+        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="simplebpmn.gmftool#//@palette/@tools.1/@tools.0"/>
+    <diagramLink
+        href="simplebpmn.gmfgraph#Association"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
         href="simplebpmn.ecore#//ConnectingObject/from"/>
@@ -285,7 +408,7 @@
           href="simplebpmn.ecore#//BPMNElement/name"/>
     </labelMappings>
     <containmentFeature
-        href="simplebpmn.ecore#//BusinessProcessDiagram/elements"/>
+        href="simplebpmn.ecore#//Group/elements"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="simplebpmn.gmftool#//@palette/@tools.1/@tools.0"/>

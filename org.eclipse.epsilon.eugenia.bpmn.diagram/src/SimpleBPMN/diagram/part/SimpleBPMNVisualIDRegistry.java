@@ -168,6 +168,98 @@ public class SimpleBPMNVisualIDRegistry {
 				return SimpleBPMN.diagram.edit.parts.GroupEditPart.VISUAL_ID;
 			}
 			break;
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartmentEditPart.VISUAL_ID:
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getXOR().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getOR().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAND().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getLane().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getPool().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getStartEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getIntermediateEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEndEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getActivity()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getDataObject()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getGroup()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartment2EditPart.VISUAL_ID:
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getXOR().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getOR().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAND().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getLane().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getPool().isSuperTypeOf(
+					domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getStartEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getIntermediateEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getEndEvent()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getActivity()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getDataObject()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID;
+			}
+			if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getGroup()
+					.isSuperTypeOf(domainElement.eClass())) {
+				return SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID;
+			}
+			break;
 		}
 		return -1;
 	}
@@ -285,18 +377,149 @@ public class SimpleBPMNVisualIDRegistry {
 			if (SimpleBPMN.diagram.edit.parts.GroupNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
+			if (SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartmentEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			break;
-		case SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.XORName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.ORName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.ANDName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.LaneName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.PoolName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.StartEventName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.IntermediateEventName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.EndEventName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.ActivityName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.DataObjectName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.GroupName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartment2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartmentEditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartment2EditPart.VISUAL_ID:
+			if (SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (SimpleBPMN.diagram.edit.parts.Group2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
+		case SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID:
 			if (SimpleBPMN.diagram.edit.parts.MessageFlowNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID:
 			if (SimpleBPMN.diagram.edit.parts.SequenceFlowNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
-		case SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID:
 			if (SimpleBPMN.diagram.edit.parts.AssociationNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -316,13 +539,25 @@ public class SimpleBPMNVisualIDRegistry {
 				.isSuperTypeOf(domainElement.eClass())) {
 			return SimpleBPMN.diagram.edit.parts.MessageFlowEditPart.VISUAL_ID;
 		}
+		if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getMessageFlow()
+				.isSuperTypeOf(domainElement.eClass())) {
+			return SimpleBPMN.diagram.edit.parts.MessageFlow2EditPart.VISUAL_ID;
+		}
 		if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getSequenceFlow()
 				.isSuperTypeOf(domainElement.eClass())) {
 			return SimpleBPMN.diagram.edit.parts.SequenceFlowEditPart.VISUAL_ID;
 		}
+		if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getSequenceFlow()
+				.isSuperTypeOf(domainElement.eClass())) {
+			return SimpleBPMN.diagram.edit.parts.SequenceFlow2EditPart.VISUAL_ID;
+		}
 		if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAssociation()
 				.isSuperTypeOf(domainElement.eClass())) {
 			return SimpleBPMN.diagram.edit.parts.AssociationEditPart.VISUAL_ID;
+		}
+		if (SimpleBPMN.SimpleBPMNPackage.eINSTANCE.getAssociation()
+				.isSuperTypeOf(domainElement.eClass())) {
+			return SimpleBPMN.diagram.edit.parts.Association2EditPart.VISUAL_ID;
 		}
 		return -1;
 	}
@@ -354,6 +589,13 @@ public class SimpleBPMNVisualIDRegistry {
 	 * @generated
 	 */
 	public static boolean isCompartmentVisualID(int visualID) {
+		switch (visualID) {
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartmentEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.GroupGroupElementsCompartment2EditPart.VISUAL_ID:
+			return true;
+		default:
+			break;
+		}
 		return false;
 	}
 
@@ -371,10 +613,19 @@ public class SimpleBPMNVisualIDRegistry {
 		case SimpleBPMN.diagram.edit.parts.PoolEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.ActivityEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.DataObjectEditPart.VISUAL_ID:
-		case SimpleBPMN.diagram.edit.parts.GroupEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.StartEventEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.IntermediateEventEditPart.VISUAL_ID:
 		case SimpleBPMN.diagram.edit.parts.EndEventEditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.XOR2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.OR2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.AND2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.Lane2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.Pool2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.StartEvent2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.IntermediateEvent2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.EndEvent2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.Activity2EditPart.VISUAL_ID:
+		case SimpleBPMN.diagram.edit.parts.DataObject2EditPart.VISUAL_ID:
 			return true;
 		default:
 			break;

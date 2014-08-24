@@ -23,3 +23,5 @@ First version completed: 19:21
 * Cannot create edge from data object to intermediate object as in Fig. 7 of Kouhen's paper
 * Had to change Group to containment
 * Had to change Event to StartEvent/IntermediateEvent/EndEvent
+--
+Second version created by Dimitris (another 92 minutes)

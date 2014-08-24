@@ -19,10 +19,12 @@ abstract class Swimlane extends BPMNElement {
 }
 
 class Lane extends Swimlane {
-	
+	@gmf.compartment
+	val FlowObject[*] flowObjects;
 }
 
 class Pool extends Swimlane {
+	@gmf.compartment
 	val Lane[*] lanes;
 }
 
@@ -53,7 +55,7 @@ class Association extends ConnectingObject {
 
 @gmf.node(label="name")
 abstract class FlowObject extends BPMNElement {
-	
+
 }
 
 abstract class Gateway extends FlowObject {
